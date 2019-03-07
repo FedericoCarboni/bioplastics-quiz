@@ -1,0 +1,25 @@
+#description {
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 12px;
+  width: 60%;
+  margin-left: 20%;
+  border-top: 2px;
+}
+
+#description hr {
+  width: 80%;
+  background-color: white;
+}
+
+.question-option {
+  margin-bottom: 8px;
+}
+
+.question-option button {
+  width: 40%;
+}
+
+.hidden {
+  display: none;
+}
