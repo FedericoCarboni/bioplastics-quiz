@@ -41,7 +41,7 @@ function populate() {
     document.getElementById('question-options').classList.remove('hidden');
 
     document.getElementById('question-header').innerHTML = questions[index].prompt;
-    document.getElementById('question-index').innerHTML = "Question " + (index + 1);
+    document.getElementById('question-index').innerHTML = "Domanda " + (index + 1);
 
     document.getElementById('a').innerHTML = questions[index].options[0];
     document.getElementById('b').innerHTML = questions[index].options[1];
@@ -51,9 +51,9 @@ function populate() {
     document.getElementById('next-question').classList.add('hidden');
 
     if (index == (questions.length - 1)) {
-      document.getElementById('next-question').innerHTML = "Finish";
+      document.getElementById('next-question').innerHTML = "Finisci";
     } else {
-      document.getElementById('next-question').innerHTML = "Next Question";
+      document.getElementById('next-question').innerHTML = "Prossima Domanda";
     }
   }
 }
@@ -70,7 +70,7 @@ function check(answer) {
     document.getElementById('question-options').classList.add('hidden');
     document.getElementById('next-question').classList.add('btn-success');
 
-    description.innerHTML = "<h3 id=\"description-header\">Correct. Well done!<h3><hr>" + questions[index].description;
+    description.innerHTML = "<h3 id=\"description-header\">Esatto. Ben fatto!<h3><hr>" + questions[index].description;
     description.classList.remove('hidden');
     description.classList.remove('bg-danger');
 
@@ -83,7 +83,7 @@ function check(answer) {
     document.getElementById('question-options').classList.add('hidden');
     document.getElementById('next-question').classList.add('btn-danger');
 
-    description.innerHTML = "<h3 id=\"description-header\">Wrong. You'll do better next time!</h3><hr>" + questions[index].description;
+    description.innerHTML = "<h3 id=\"description-header\">Sbagliato. Farai meglio la prossima volta!</h3><hr>" + questions[index].description;
     description.classList.remove('bg-success');
     description.classList.remove('hidden');
 

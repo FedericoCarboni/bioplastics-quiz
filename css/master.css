@@ -1,9 +1,17 @@
+.container {
+  margin-top: 60px;
+}
+
+.container hr {
+  width: 60%;
+}
+
 #description {
-  font-size: 18px;
-  font-weight: 400;
-  border-radius: 12px;
+  border-radius: 10px;
   width: 60%;
   margin-left: 20%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-top: 2px;
 }
 
@@ -12,8 +20,12 @@
   background-color: white;
 }
 
+#question-options {
+  margin-top: 40px;
+}
+
 .question-option {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .question-option button {
