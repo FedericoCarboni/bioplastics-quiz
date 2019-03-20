@@ -1,16 +1,13 @@
-class Question {
-
-  constructor(prompt, options, answer, description) {
-    this.prompt = prompt;
-    this.options = options;
-    this.answer = answer;
-    this.description = description;
-  }
-
-  isCorrect = function (answer) {
-    return this.answer == answer;
-  }
+function Question(prompt, options, answer, description) {
+  this.prompt = prompt;
+  this.options = options;
+  this.answer = answer;
+  this.description = description;
 }
+
+Question.prototype.isCorrect = function (answer) {
+  return this.answer == answer;
+};
 
 var questions = [
   new Question("Sono una domanda?", ["Si", "No", "Forse", "Non lo so"], "a", "Ciao"),
@@ -20,6 +17,7 @@ var questions = [
 
 
 // Randomizes the order of the questions
+/* CIAO */
 for (var i = questions.length - 1; i > 0; i--) {
   var j = Math.floor(Math.random() * (i + 1));
   var tmp = questions[i];
