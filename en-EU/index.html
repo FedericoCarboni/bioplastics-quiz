@@ -5,19 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="author" content="Federico Carboni, Francesco Di Cesare, Davide Basile">
-    <title>BioPlastics</title>
+    <title>BioPlastics Quiz</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Master CSS -->
-    <link rel="stylesheet" type="text/css" href="./css/master.css">
+    <link rel="stylesheet" type="text/css" href="../css/master.css">
   </head>
   <body>
     <main role="main">
-      <div class="container text-center">
-        <h1>BioPlastics Quiz</h1>
-        <h5>by Federico Carboni, Francesco Di Cesare and Davide Basile</h5>
-        <p></p>
-        <a class="btn btn-success" href="https://federicocarboni.github.io/bioplastics-quiz/en-EU/" style="font-size: 22px;">Start Quiz</a>
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" onclick="">Other languages <span class="caret"></span></button>
+        <ul class="dropdown-menu text-center">
+          <li class="dropdown-item" style="background-color: #fff;"><a href="https://federicocarboni.github.io/bioplastics-quiz/it-IT/">Italiano</a></li>
+        </ul>
+      </div>
+      <div class="container text-center" id="question">
+        <h1 id="question-header"></h1>
+        <h4 class="text-muted" id="question-index"></h4>
+        <hr>
+        <div id="question-options">
+          <div class="question-option">
+            <button class="btn btn-primary" id="a" type="button" onclick="check('a');"></button>
+          </div>
+          <div class="question-option">
+            <button class="btn btn-primary" id="b" type="button" onclick="check('b');"></button>
+          </div>
+          <div class="question-option">
+            <button class="btn btn-primary" id="c" type="button" onclick="check('c');"></button>
+          </div>
+          <div class="question-option">
+            <button class="btn btn-primary" id="d" type="button" onclick="check('d');"></button>
+          </div>
+        </div>
+        <br>
+        <div class="text-white" id="description">
+        </div>
+        <br>
+        <button class="btn" id="next-question" type="button" onclick="next();"></button>
+      </div>
+      <div class="container text-center hidden" id="score">
+        <!-- The score number -->
       </div>
     </main>
     <footer>
@@ -31,5 +58,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../js/quiz-en-EU.js"></script>
   </body>
 </html>
