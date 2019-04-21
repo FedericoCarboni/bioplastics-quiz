@@ -165,7 +165,7 @@ function hint() {
     hintBtn.classList.add('btn-secondary');
     hintBtn.disabled = true;
     hints++;
-    hintBtn.title = "Suggerimento già usato, ne hai ancora " + Math.round(questions.length * 0.3);
+    hintBtn.title = "Suggerimento già usato, ne hai ancora " + Math.round(questions.length * 0.3) - 1;
     question = questions[index];
     questionOptions = document.getElementById('question-options');
     _options = ['a', 'b', 'c', 'd'];

@@ -164,7 +164,7 @@ function hint() {
     hintBtn.classList.add('btn-secondary');
     hintBtn.disabled = true;
     hints++;
-    hintBtn.title = "Hint already used, hints left " + Math.round(questions.length * 0.3);
+    hintBtn.title = "Hint already used, hints left " + Math.round(questions.length * 0.3) - hints;
     question = questions[index];
     questionOptions = document.getElementById('question-options');
     _options = ['a', 'b', 'c', 'd'];
