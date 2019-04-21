@@ -1,5 +1,5 @@
 .container {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .container hr {
@@ -21,7 +21,7 @@
 }
 
 #question-options {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .question-option {
@@ -37,6 +37,42 @@
 }
 
 .footer {
-  width: 40%;
-  margin-left: 30%;
+  width: 50%;
+  margin-left: 25%;
+}
+
+#hint {
+  font-size: 0.8em;
+}
+
+@media (max-width: 720px) {
+  .container {
+    margin-top: 15px;
+  }
+
+  .container hr {
+    width: 80%;
+  }
+
+  .container h1 {
+    font-size: 28px;
+  }
+
+  .container h4 {
+    font-size: 18px;
+  }
+
+  .question-option button {
+    width: 80%;
+  }
+
+  #description {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .footer {
+    width: 80%;
+    margin-left: 10%;
+  }
 }
