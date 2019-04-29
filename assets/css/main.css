@@ -1,0 +1,59 @@
+/* Globals */
+
+.container {
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+.container hr {
+  width: 60%;
+}
+
+.container p {
+  margin-top: 20px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+.footer {
+  position: absolute;
+  width: 60%;
+  left: 20%;
+}
+
+.btn-lang {
+  position: fixed;
+}
+
+@media (max-width: 860px) {
+  .container {
+    position: relative;
+    margin-top: 15px;
+  }
+
+  .container hr {
+    width: 80%;
+  }
+
+  .container h1 {
+    font-size: 28px;
+  }
+
+  .container h3 {
+    font-size: 18px;
+  }
+
+  .footer {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+  }
+}

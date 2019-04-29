@@ -1,0 +1,49 @@
+#description {
+  border-radius: 10px;
+  width: 60%;
+  margin-left: 20%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 2px;
+}
+
+#description hr {
+  width: 80%;
+  background-color: white;
+}
+
+#question-options {
+  margin-top: 30px;
+}
+
+.question-option {
+  margin-bottom: 10px;
+}
+
+.question-option button {
+  width: 40%;
+}
+
+.hidden {
+  display: none;
+}
+
+#hint {
+  font-size: 0.8em;
+}
+
+@media (max-width: 860px) {
+  .question-option button {
+    width: 80%;
+  }
+
+  #description {
+    width: 80%;
+    left: 10%;
+  }
+
+  .footer {
+    width: 80%;
+    left: 10%;
+  }
+}

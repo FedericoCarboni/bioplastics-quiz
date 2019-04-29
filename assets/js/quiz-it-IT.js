@@ -111,9 +111,9 @@ function populate() {
     document.getElementById('next-question').classList.add('hidden');
 
     if (index == (questions.length - 1)) {
-      document.getElementById('next-question').innerHTML = "Finish";
+      document.getElementById('next-question').innerHTML = "Finisci";
     } else {
-      document.getElementById('next-question').innerHTML = "Next Question";
+      document.getElementById('next-question').innerHTML = "Prossima Domanda";
     }
   }
 }
