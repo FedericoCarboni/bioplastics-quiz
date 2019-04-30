@@ -109,9 +109,7 @@ function populate() {
 
     document.getElementById('next-question').classList.add('hidden');
 
-    if (index == (questions.length - 1)) {
-      document.getElementById('next-question').innerHTML = "Finish";
-    } else {
+    if (index != (questions.length - 1)) {
       document.getElementById('next-question').innerHTML = "Next Question";
     }
   }
@@ -119,16 +117,25 @@ function populate() {
 
 
 function check(answer) {
+  console.log('HEllo')
   var description = document.getElementById('description');
-
   if (questions[index].isCorrect(answer)) {
     score++;
-    document.getElementById('next-question').classList.remove('hidden');
-    document.getElementById('next-question').classList.remove('btn-danger');
-
+    
     document.getElementById('question-options').classList.add('hidden');
+    if (index == (questions.length - 1)) {
+      // document.getElementById('next-question').innerHTML = "Finish";
+      finishBtn = document.getElementById('finish-btn');
+      document.getElementById('finish').action = "/en-EU/quiz?score=" + (String) (score - hints / 2);
+      finishBtn.classList.add('btn-success');
+      document.getElementById('finish').classList.remove('hidden');
+      document.getElementById('next-question').classList.add('hidden');
+    } else {
+      document.getElementById('next-question').classList.remove('hidden');
+      document.getElementById('next-question').classList.remove('btn-danger');
+      document.getElementById('next-question').classList.add('btn-success');
+    }
     document.getElementById('hint').classList.add('hidden');
-    document.getElementById('next-question').classList.add('btn-success');
     descHeader = document.getElementById('description-header');
     descHeader.innerHTML = "Correct. Well done!";
     descBody = document.getElementById('description-body');
@@ -139,13 +146,20 @@ function check(answer) {
     description.classList.add('bg-success');
   } else {
     // score = score - 0.5;
-    document.getElementById('next-question').classList.remove('hidden');
-    document.getElementById('next-question').classList.remove('btn-success');
-
     document.getElementById('question-options').classList.add('hidden');
+    if (index == (questions.length - 1)) {
+      // document.getElementById('next-question').innerHTML = "Finish";
+      finishBtn = document.getElementById('finish-btn');
+      document.getElementById('finish').action = "/en-EU/quiz?score=" + score - hints / 2;
+      finishBtn.classList.add('btn-danger');
+      document.getElementById('finish').classList.remove('hidden');
+      document.getElementById('next-question').classList.add('hidden');
+    } else {
+      document.getElementById('next-question').classList.remove('hidden');
+      document.getElementById('next-question').classList.remove('btn-success');
+      document.getElementById('next-question').classList.add('btn-danger');
+    }
     document.getElementById('hint').classList.add('hidden');
-    document.getElementById('next-question').classList.add('btn-danger');
-
     descHeader = document.getElementById('description-header');
     descHeader.innerHTML = "Wrong. You'll do better next time!";
     descBody = document.getElementById('description-body');

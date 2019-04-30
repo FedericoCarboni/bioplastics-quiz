@@ -6,16 +6,16 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="author" content="Federico Carboni, Francesco Di Cesare, Davide Basile">
     <title>BioPlastics Quiz</title>
-    <!-- Main CSS file for the project -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
-    <!-- Quiz CSS file for the project -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/quiz.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main CSS file for the project -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+    <!-- Quiz CSS file for the project -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.css') }}">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-32x32.png">
-    <link rel="shortcut icon" href="../../assets/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
   </head>
   <body>
     <main role="main">
@@ -23,7 +23,7 @@
         <h1 id="question-header"></h1>
         <h4 class="text-muted" id="question-index"></h4>
         <hr>
-        <button type="button" class="btn btn-primary" id="hint" onclick="hint();" title="Clicca per un aiuto">Suggerimento</button>
+        <button type="button" class="btn btn-primary" id="hint" onclick="hint();" title="Clicca per un aiuto">Hint</button>
         <div id="question-options">
           <div class="question-option">
             <button class="btn btn-primary" id="a" type="button" onclick="check('a');"></button>
@@ -45,6 +45,9 @@
         </div>
         <br>
         <button class="btn" id="next-question" type="button" onclick="next();"></button>
+        <form id="finish" method="post" class="hidden">
+          <input id="finish-btn" type="button" value="submit" text="Finish" class="btn">
+        </form>
       </div>
       <div class="container text-center hidden" id="score">
         <h1 id="score-header"><!-- The score of it --></h1>
@@ -66,6 +69,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="../../assets/js/quiz-en-EU.js"></script>
+    <script src="{{ url_for('static', filename='js/quiz-en-EU.js') }}"></script>
   </body>
 </html>

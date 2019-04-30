@@ -33,6 +33,10 @@ footer {
   position: fixed;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 860px) {
   .container {
     position: relative;
