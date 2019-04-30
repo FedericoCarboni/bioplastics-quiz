@@ -8,7 +8,7 @@
 }
 
 .container hr {
-  width: 60%;
+  width: 70%;
 }
 
 .container p {
@@ -47,8 +47,18 @@ footer {
     width: 80%;
   }
 
+  .container p {
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 10%;
+  }
+
   .container h1 {
     font-size: 28px;
+  }
+
+  .container h3 {
+    font-size: 22px;
   }
 
   .container h4 {

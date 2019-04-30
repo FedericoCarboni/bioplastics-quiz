@@ -36,7 +36,7 @@ var questions = [
   new Question("Cos’è un polimero?", ["Un insieme di molecole giganti costituite da tanti mattoncini detti unità ripetitive", "Un insieme di micro molecole che forma una grande macro molecola", "Un insieme di unità ripetitive", "Una micro molecola che si unisce ad un’altra"], "a", ""),
   new Question("Cosa sono le bioplastiche?", ["Non c’è una definizione che vada bene per tutti gli studiosi", "Una plastica che deriva anche solo in parte da risorse rinnovabili o è biodegradabile", "Una plastica biodegradabile", "Una plastica che proviene da fonti rinnovabili"], "a", ""),
   new Question("Si può creare una plastica attraverso una buccia di banana?", ["Si", "No", "Non ci sono ancora esperimenti a riguardo", "Gli studi sono ancora in corso"], "b", ""),
-  new Question("Qual`è il continente che produce più bioplastiche?", ["Europa", "Asia", "Nord America", "Oceania"], "b", ""),
+  new Question("Qual è il continente che produce più bioplastiche?", ["Europa", "Asia", "Nord America", "Oceania"], "b", ""),
   new Question("Quanti sono i polimeri lavorati dalle industrie delle bioplastiche in Italia?", ["117.000 tonnellate", "52.000 tonnellate", "73.000 tonnellate ", "19.000 tonnellate"], "c", ""),
   new Question("Quanto è il fatturato complessivo delle aziende di bioplastiche in Italia?", ["Tra 200 e 400 milioni di euro", "Tra 450 e 600 milioni di euro", "Meno di 200 milioni di euro", "Più di 600 milioni di euro"], "b", ""),
   new Question("Cos’è Ohoo?", ["Un’organizzazione contro le plastiche non riciclabili", "Un’azienda che produce bioplastiche da frutta e verdura", "Un’azienda che ricicla le bioplastiche in posate", "Un progetto che crea una bottiglia d’acqua commestibile"], "d", ""),
