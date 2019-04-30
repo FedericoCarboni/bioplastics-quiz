@@ -30,7 +30,7 @@ footer {
 }
 
 .btn-lang {
-  position: fixed;
+  display: block;
 }
 
 .hidden {
@@ -51,7 +51,7 @@ footer {
     font-size: 28px;
   }
 
-  .container h3 {
+  .container h4 {
     font-size: 18px;
   }
 
