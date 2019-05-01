@@ -1,5 +1,6 @@
-/** Class wrapper for browser compatibility */
+/* Class wrapper for browser compatibility */
 var Quiz = /** @class */ (function () {
+  /* Constructor function */
   function Quiz(json) {
     var data = JSON.parse(json);
     this.questions = data.questions;

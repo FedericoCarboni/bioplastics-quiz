@@ -19,7 +19,7 @@ def index_redirect():
 def index(lang):
   if not lang in langs:
     return flask.abort(404)
-  return flask.render_template(lang + '/index.html')
+  return flask.render_template('index.' + lang + '.html')
 
 
 @app.route('/<string:lang>/quiz/')
@@ -40,7 +40,7 @@ def result(lang):
     result = result if result is not None else flask.abort(400)
     result = float(result) if result.isdigit() else flask.abort(400)
     results.append(result)
-    return flask.render_template(lang + '/result.html', result=result, average=average)
+    return flask.render_template('result.' + lang + '.html', result=result, average=average)
   else:
     return flask.redirect('/' + lang + '/quiz/')
 
