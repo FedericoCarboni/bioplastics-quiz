@@ -8,11 +8,16 @@
 }
 
 .container hr {
-  width: 60%;
+  width: 70%;
 }
 
 .container p {
   margin-top: 20px;
+  width: 60%;
+  margin-left: 20%;
+}
+
+.chart {
   width: 60%;
   margin-left: 20%;
 }
@@ -30,7 +35,7 @@ footer {
 }
 
 .btn-lang {
-  position: fixed;
+  display: block;
 }
 
 .hidden {
@@ -47,12 +52,27 @@ footer {
     width: 80%;
   }
 
+  .container p {
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 10%;
+  }
+
   .container h1 {
     font-size: 28px;
   }
 
   .container h3 {
+    font-size: 22px;
+  }
+
+  .container h4 {
     font-size: 18px;
+  }
+
+  .chart {
+    width: 80%;
+    margin-left: 10%;
   }
 
   .footer {

@@ -9,12 +9,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Main CSS file for the project -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     <!-- Quiz CSS file for the project -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.css') }}">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
   </head>
   <body>
@@ -23,39 +23,33 @@
         <h1 id="question-header"></h1>
         <h4 class="text-muted" id="question-index"></h4>
         <hr>
-        <button type="button" class="btn btn-primary" id="hint" onclick="hint();" title="Clicca per un aiuto">Hint</button>
+        <button type="button" class="btn btn-primary" id="hint" onclick="quiz.hint();" title="Click for help">Hint</button>
         <div id="question-options">
           <div class="question-option">
-            <button class="btn btn-primary" id="a" type="button" onclick="check('a');"></button>
+            <button class="btn btn-primary" id="a" type="button" onclick="quiz.check('a');"></button>
           </div>
           <div class="question-option">
-            <button class="btn btn-primary" id="b" type="button" onclick="check('b');"></button>
+            <button class="btn btn-primary" id="b" type="button" onclick="quiz.check('b');"></button>
           </div>
           <div class="question-option">
-            <button class="btn btn-primary" id="c" type="button" onclick="check('c');"></button>
+            <button class="btn btn-primary" id="c" type="button" onclick="quiz.check('c');"></button>
           </div>
           <div class="question-option">
-            <button class="btn btn-primary" id="d" type="button" onclick="check('d');"></button>
+            <button class="btn btn-primary" id="d" type="button" onclick="quiz.check('d');"></button>
           </div>
         </div>
         <br>
         <div class="text-white" id="description">
-          <h3 id="description-header"></h3>
+          <h3 id="description-header"></h3><hr>
           <p id="description-body"></p>
         </div>
         <br>
-        <button class="btn" id="next-question" type="button" onclick="next();"></button>
-        <form id="finish" method="post" class="hidden">
-          <input id="finish-btn" type="button" value="submit" text="Finish" class="btn">
+        <button class="btn" id="next-question" type="button" onclick="quiz.next();"></button>
+        <!-- Result form -->
+        <form id="finish-form" action="/en-EU/quiz/result" method="post" class="hidden">
+          <input type="hidden" id="finish-score" name="score">
+          <input type="submit" id="finish-btn" value="Finish" class="btn">
         </form>
-      </div>
-      <div class="container text-center hidden" id="score">
-        <h1 id="score-header"><!-- The score of it --></h1>
-        <hr>
-        <div>
-          <p class="text-muted" id="score-description"><!-- The score's description --></p>
-        </div>
-        <!-- The score number -->
       </div>
     </main>
     <footer>
@@ -65,10 +59,14 @@
         <p class="text-muted">These web pages are built using <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="https://jquery.com/" target="_blank">jQuery</a> and <a href="https://popper.js.org/" target="_blank">Popper.js</a>. The source code is available on <a href="https://github.com/FedericoCarboni/bioplastics-quiz" target="_self">GitHub</a>.</p>
       </div>
     </footer>
-    <!-- jQuery and Bootstrap JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <!-- jQuery, Popper.js and Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='js/quiz-en-EU.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/quiz.min.js') }}"></script>
+    <script>
+      var quiz = new Quiz('{{ quiz|tojson }}');
+      quiz.populate();
+    </script>
   </body>
 </html>

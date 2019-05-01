@@ -1,0 +1,250 @@
+{
+    "en-EU": {
+        "questions": [
+            {
+                "prompt": "How much plastic has been produced in 2017 (millions of tons)?",
+                "options": [
+                    "Under 100",
+                    "Between 200 e 300",
+                    "Between 400 e 500",
+                    "More than 500"
+                ],
+                "answer": "c",
+                "description": ""
+            },
+            {
+                "prompt": "What is a polymer?",
+                "options": [
+                    "A set of giant molecules made up of smaller chains called repetitive units",
+                    "A set of micro molecules that makes a bigger one",
+                    "A set of repetitive units",
+                    "A molecule that attaches to another"
+                ],
+                "answer": "a",
+                "description": ""
+            },
+            {
+                "prompt": "What are bioplastics?",
+                "options": [
+                    "There's no official definitions",
+                    "Una plastica che deriva anche solo in parte da risorse rinnovabili o è biodegradable A plastic made at least partly of renewable resources or that is biodegradable",
+                    "A biodegradable plastic",
+                    "A plastic made of renewable resources"
+                ],
+                "answer": "a",
+                "description": ""
+            },
+            {
+                "prompt": "Can plastic be made out of the peel of a banana?",
+                "options": [
+                    "Yes",
+                    "No",
+                    "There have been no experiments regarding this",
+                    "Scientists are still trying"
+                ],
+                "answer": "b",
+                "description": ""
+            },
+            {
+                "prompt": "What is the continent that produces the most bioplastic?",
+                "options": [
+                    "Europe",
+                    "Asia",
+                    "North America",
+                    "Oceania"
+                ],
+                "answer": "b",
+                "description": ""
+            },
+            {
+                "prompt": "How many polymers are produced by bioplastics industries in Italy?",
+                "options": [
+                    "117.000 tonnes",
+                    "52.000 tonnes",
+                    "73.000 tonnes",
+                    "19.000 tonnes"
+                ],
+                "answer": "c",
+                "description": ""
+            },
+            {
+                "prompt": "How much is the complete revenue of bioplastics industries in Italy?",
+                "options": [
+                    "Between 200 e 400 millions of euros",
+                    "Between 450 e 600 millions of euros",
+                    "Less than 200 millions of euros",
+                    "More than 600 millions of euros"
+                ],
+                "answer": "b",
+                "description": ""
+            },
+            {
+                "prompt": "What is Ohoo?",
+                "options": [
+                    "An organization against non-recyclable plastics",
+                    "A company that produces bioplastics from fruits and vegetables",
+                    "A company that recycles bioplastics",
+                    "A project that makes edible water bottles"
+                ],
+                "answer": "d",
+                "description": ""
+            },
+            {
+                "prompt": "If a polymer is made out of natural materials, is it always biodegradable?",
+                "options": [
+                    "No, it's never biodegradable",
+                    "Yes, it's always biodegradable",
+                    "Scientists haven't conducted any research about it",
+                    "It depends from the chemical structure"
+                ],
+                "answer": "d",
+                "description": ""
+            },
+            {
+                "prompt": "How many types of bioplastics exist?",
+                "options": [
+                    "10 types and they're distinguished by grades of reuse",
+                    "3 types: A, B, C",
+                    "5 types: 1, 2, 3, 4, 5",
+                    "There's only one type of bioplastic, vegetal"
+                ],
+                "answer": "b",
+                "description": ""
+            }
+        ],
+        "lang": {
+            "hintnotused": "Click for help, hints left %s",
+            "hintsfinished": "You finished your hints",
+            "hintused": "Hint already used, hints left %s",
+            "questionindex": "Question %s",
+            "descriptioncorrect": "Correct. Well done!",
+            "descriptionwrong": "Wrong. You'll do better next time!",
+            "nextquestion": "Next Question",
+            "finish": "Finish"
+        }
+    },
+    "it-IT": {
+        "questions": [
+            {
+                "prompt": "Quanti milioni di tonnellate di plastica sono state prodotte nel 2017?",
+                "options": [
+                    "Meno di 100",
+                    "Tra 200 e 300",
+                    "Tra 400 e 500",
+                    "Più di 500"
+                ],
+                "answer": "c",
+                "description": ""
+            },
+            {
+                "prompt": "Cos’è un polimero?",
+                "options": [
+                    "Un insieme di molecole giganti costituite da tanti mattoncini detti unità ripetitive",
+                    "Un insieme di micro molecole che forma una grande macro molecola",
+                    "Un insieme di unità ripetitive",
+                    "Una micro molecola che si unisce ad un’altra"
+                ],
+                "answer": "a",
+                "description": ""
+            },
+            {
+                "prompt": "Cosa sono le bioplastiche?",
+                "options": [
+                    "Non c’è una definizione che vada bene per tutti gli studiosi",
+                    "Una plastica che deriva anche solo in parte da risorse rinnovabili o è biodegradabile",
+                    "Una plastica biodegradabile",
+                    "Una plastica che proviene da fonti rinnovabili"
+                ],
+                "answer": "a",
+                "description": ""
+            },
+            {
+                "prompt": "Si può creare una plastica attraverso una buccia di banana?",
+                "options": [
+                    "Si",
+                    "No",
+                    "Non ci sono ancora esperimenti a riguardo",
+                    "Gli studi sono ancora in corso"
+                ],
+                "answer": "b",
+                "description": ""
+            },
+            {
+                "prompt": "Qual è il continente che produce più bioplastiche?",
+                "options": [
+                    "Europa",
+                    "Asia",
+                    "Nord America",
+                    "Oceania"
+                ],
+                "answer": "b",
+                "description": ""
+            },
+            {
+                "prompt": "Quanti sono i polimeri lavorati dalle industrie delle bioplastiche in Italia?",
+                "options": [
+                    "117.000 tonnellate",
+                    "52.000 tonnellate",
+                    "73.000 tonnellate ",
+                    "19.000 tonnellate"
+                ],
+                "answer": "c",
+                "description": ""
+            },
+            {
+                "prompt": "Quanto è il fatturato complessivo delle aziende di bioplastiche in Italia?",
+                "options": [
+                    "Tra 200 e 400 milioni di euro",
+                    "Tra 450 e 600 milioni di euro",
+                    "Meno di 200 milioni di euro",
+                    "Più di 600 milioni di euro"
+                ],
+                "answer": "b",
+                "description": ""
+            },
+            {
+                "prompt": "Cos’è Ohoo?",
+                "options": [
+                    "Un’organizzazione contro le plastiche non riciclabili",
+                    "Un’azienda che produce bioplastiche da frutta e verdura",
+                    "Un’azienda che ricicla le bioplastiche in posate",
+                    "Un progetto che crea una bottiglia d’acqua commestibile"
+                ],
+                "answer": "d",
+                "description": ""
+            },
+            {
+                "prompt": "È sempre biodegradabile un polimero ottenuto da fonti naturali?",
+                "options": [
+                    "No, non è mai biodegradabile",
+                    "È sempre biodegradabile",
+                    "Gli scienziati non hanno fatto ancora studi a riguardo",
+                    "Dipende dalla struttura chimica"
+                ],
+                "answer": "d",
+                "description": ""
+            },
+            {
+                "prompt": "Quanti tipi di bioplastiche esistono?",
+                "options": [
+                    "10 tipi e si distinguono per gradi di riutilizzo",
+                    "3 tipi: A, B, C",
+                    "5 tipi: 1, 2, 3, 4, 5",
+                    "C’è solo un tipo di bioplastiche, quelle vegetali"
+                ],
+                "answer": "b",
+                "description": ""
+            }
+        ],
+        "lang": {
+            "hintnotused": "Clicca per un aiuto, ne restano %s",
+            "hintsfinished": "Hai finito i suggerimenti",
+            "hintused": "Suggerimento già usato, ne restano %s",
+            "questionindex": "Domanda %s",
+            "descriptioncorrect": "Esatto. Ben fatto!",
+            "descriptionwrong": "Sbagliato. Farai meglio la prossima volta!",
+            "nextquestion": "Prossima Domanda",
+            "finish": "Finisci"
+        }
+    }
+}
