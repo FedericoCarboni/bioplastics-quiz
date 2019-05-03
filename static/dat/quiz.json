@@ -137,26 +137,26 @@
                 "description": ""
             },
             {
-                "prompt": "Cos’è un polimero?",
+                "prompt": "Cos'è un polimero?",
                 "options": [
                     "Un insieme di molecole giganti costituite da tanti mattoncini detti unità ripetitive",
                     "Un insieme di micro molecole che forma una grande macro molecola",
                     "Un insieme di unità ripetitive",
-                    "Una micro molecola che si unisce ad un’altra"
+                    "Una micro molecola che si unisce ad un'altra"
                 ],
                 "answer": "a",
-                "description": ""
+                "description": "Un polimero (parola creata dall'unione delle parole greche “πολύς” e “μέφος” = molte parti) è un insieme di molecole giganti (macromolecole) costituite da tanti mattoncini detti unità ripetitive tenute insieme da legami covalenti."
             },
             {
                 "prompt": "Cosa sono le bioplastiche?",
                 "options": [
-                    "Non c’è una definizione che vada bene per tutti gli studiosi",
+                    "Non c'è una definizione che vada bene per tutti gli studiosi",
                     "Una plastica che deriva anche solo in parte da risorse rinnovabili o è biodegradabile",
                     "Una plastica biodegradabile",
                     "Una plastica che proviene da fonti rinnovabili"
                 ],
                 "answer": "a",
-                "description": ""
+                "description": "Non c'è una definizione che vada bene per tutti, ma la definizione più condivisa(dell'European Bioplastic): 'Un materiale può essere definito se possiede almeno una di queste caratteristiche: deriva, anche solo in parte, da risorse rinnovabili o è biodegradabile.'"
             },
             {
                 "prompt": "Si può creare una plastica attraverso una buccia di banana?",
@@ -167,7 +167,7 @@
                     "Gli studi sono ancora in corso"
                 ],
                 "answer": "b",
-                "description": ""
+                "description": "Nel 2013, a 16 anni, la studentessa Elif Bilgin ha scoperto il processo con il quale creare plastica attraverso la buccia di banana. La studentessa ha vinto il primo premio, ovvero 50 mila dollari, al concorso 'Scientific American Science in Action' per questo processo che permette di creare bioplastiche."
             },
             {
                 "prompt": "Qual è il continente che produce più bioplastiche?",
@@ -178,7 +178,7 @@
                     "Oceania"
                 ],
                 "answer": "b",
-                "description": ""
+                "description": "L'Asia, delle 2.11 milioni di tonnellate di bioplastiche, produce il 55% di esse, l'Oceania 1%, l'Europa il 19%, gli L'America del Nord il 16%, l'America del Sud 9% e l'Africa non ne produce(dati del 2018)."
             },
             {
                 "prompt": "Quanti sono i polimeri lavorati dalle industrie delle bioplastiche in Italia?",
@@ -189,7 +189,7 @@
                     "19.000 tonnellate"
                 ],
                 "answer": "c",
-                "description": ""
+                "description": "I settori applicativi in cui vengono usate queste plastiche sono: 68% sono shopper monouso per la spesa, 13% sono sacchi per la raccolta della frazione organica, 19% sono manufatti per l'agricoltura, ristorazione, packaging alimentare ed igene della persona."
             },
             {
                 "prompt": "Quanto è il fatturato complessivo delle aziende di bioplastiche in Italia?",
@@ -200,18 +200,18 @@
                     "Più di 600 milioni di euro"
                 ],
                 "answer": "b",
-                "description": ""
+                "description": "Nel 2017 le industrie italiane hanno fatturato 545 milioni di euro, con 2450 addetti dedicati (fonte Plastic Consult)"
             },
             {
-                "prompt": "Cos’è Ohoo?",
+                "prompt": "Cos'è Ohoo?",
                 "options": [
-                    "Un’organizzazione contro le plastiche non riciclabili",
-                    "Un’azienda che produce bioplastiche da frutta e verdura",
-                    "Un’azienda che ricicla le bioplastiche in posate",
-                    "Un progetto che crea una bottiglia d’acqua commestibile"
+                    "Un'organizzazione contro le plastiche non riciclabili",
+                    "Un'azienda che produce bioplastiche da frutta e verdura",
+                    "Un'azienda che ricicla le bioplastiche in posate",
+                    "Un progetto che crea una bottiglia d'acqua commestibile"
                 ],
                 "answer": "d",
-                "description": ""
+                "description": "Tre designer di Londra, Rodrigo Garcia, Gonzalez, Pierre Paslier e Guillaume Couche hanno vinto il premio Lexus Design Award per l'invenzione di una bottiglia commestibile per l'acqua costituita da una doppia membrana in alginato di sodio ricavato dalle alghe brune e da cloruro di calcio."
             },
             {
                 "prompt": "È sempre biodegradabile un polimero ottenuto da fonti naturali?",
@@ -222,7 +222,7 @@
                     "Dipende dalla struttura chimica"
                 ],
                 "answer": "d",
-                "description": ""
+                "description": "Le plastiche di tipo B, ovvero le plastiche verdi (bio-Pe, Bio-PP, Bio-PVC e bio-PET), polimeri derivati da fonti rinnovabili, ma non biodegradabili."
             },
             {
                 "prompt": "Quanti tipi di bioplastiche esistono?",
@@ -230,10 +230,10 @@
                     "10 tipi e si distinguono per gradi di riutilizzo",
                     "3 tipi: A, B, C",
                     "5 tipi: 1, 2, 3, 4, 5",
-                    "C’è solo un tipo di bioplastiche, quelle vegetali"
+                    "C'è solo un tipo di bioplastiche, quelle vegetali"
                 ],
                 "answer": "b",
-                "description": ""
+                "description": "Le bioplastiche sono di 3 tipi: tipo A: polimeri a base biologica derivati da fonti rinnovabili e biodegradabili; tipo B: polimeri derivati da fonti rinnovabili, ma non biodegradabili; tipo C: polimeri derivati da fonti non rinnovabili, ma biodegradabili."
             }
         ],
         "lang": {
