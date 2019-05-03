@@ -1,5 +1,5 @@
 {
-    "en-EU": {
+    "en": {
         "questions": [
             {
                 "prompt": "How much plastic has been produced in 2017 (millions of tons)?",
@@ -123,7 +123,7 @@
             "finish": "Finish"
         }
     },
-    "it-IT": {
+    "it": {
         "questions": [
             {
                 "prompt": "Quanti milioni di tonnellate di plastica sono state prodotte nel 2017?",

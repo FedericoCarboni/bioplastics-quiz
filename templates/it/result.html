@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,10 +18,13 @@
   <body>
     <main role="main">
       <div class="container">
-        <h1>Il tuo punteggio è {{ result }}</h1>
+        <h1>Il tuo punteggio è {{ score }}</h1>
         <hr>
         <div class="chart">
           <canvas id="chart"></canvas>
+        </div>
+        <div class="chart">
+          <canvas id="line-chart"></canvas>
         </div>
       </div>
     </main>
@@ -38,41 +41,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script>
-      var result = Number('{{ result }}');
-      var average = Number('{{ average }}');
-      var ctx = document.getElementById('chart');
-      var chart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Tu', 'La media'],
-          datasets: [{
-            label: 'Punteggio',
-            data: [result, average],
-            backgroundColor: [
-              (result >= 6) ? '#28a745' : (result > 4) ? '#ffc107' : '#dc3545',
-              '#6c757d'
-            ]
-          }]
-        },
-        options: {
-          legend: {
-            display: false
-          },
-          tooltips: {
-            enabled: true
-          },
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true,
-                min: 0,
-                max: 10
-              }
-            }]
-          }
-        }
-      });
-    </script>
+    <script>window.history.replaceState&&window.history.replaceState(null,null,window.location.href),Chart.defaults.global.tooltips.cornerRadius=3,Chart.defaults.global.tooltips.intersect=!1;var result=Number("{{ score }}"),average=Number("{{ average }}"),ctx=document.getElementById("chart"),chart=new Chart(ctx,{type:"bar",data:{labels:["Tu","La media"],datasets:[{label:"Punteggio",data:[result,average],backgroundColor:[6<=result?"#28a745":4<result?"#ffc107":"#dc3545","#6c757d"]}]},options:{legend:{display:!1},tooltips:{enabled:!0},scales:{yAxes:[{ticks:{beginAtZero:!0,min:0,max:10}}]}}}),chartData=JSON.parse('{{ chart_data|tojson }}'),lineChart=(ctx=document.getElementById("line-chart"),new Chart(ctx,{type:"line",data:chartData,options:{responsive:!0,legend:{display:!1},tooltips:{enabled:!0,callbacks:{labelColor:function(e,t){return{backgroundColor:"#007bff"}}}},scales:{yAxes:[{ticks:{beginAtZero:!0,min:0,max:10}}]}}}));</script>
   </body>
 </html>

@@ -1,0 +1,3 @@
+run.py
+*.db
+__pycache__/

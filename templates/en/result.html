@@ -18,10 +18,13 @@
   <body>
     <main role="main">
       <div class="container">
-        <h1>You scored {{ result }}</h1>
+        <h1 id="score">You scored {{ score }}</h1>
         <hr>
         <div class="chart">
           <canvas id="chart"></canvas>
+        </div>
+        <div class="chart">
+          <canvas id="line-chart"></canvas>
         </div>
       </div>
     </main>
@@ -39,7 +42,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script>
-      var result = Number('{{ result }}');
+      if(window.history.replaceState)window.history.replaceState(null,null,window.location.href);
+      Chart.defaults.global.tooltips.cornerRadius = 3;
+      Chart.defaults.global.tooltips.intersect = false;
+      var result = Number('{{ score }}');
       var average = Number('{{ average }}');
       var ctx = document.getElementById('chart');
       var chart = new Chart(ctx, {
@@ -61,6 +67,37 @@
           },
           tooltips: {
             enabled: true
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                min: 0,
+                max: 10
+              }
+            }]
+          }
+        }
+      });
+      var chartData = JSON.parse('{{ chart_data|tojson }}');
+      var ctx = document.getElementById('line-chart');
+      var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: chartData,
+        options: {
+          responsive: true,
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true,
+            callbacks: {
+                labelColor: function(tooltipItem, chart) {
+                  return {
+                    backgroundColor: '#007bff'
+                  };
+                }
+              }
           },
           scales: {
             yAxes: [{
