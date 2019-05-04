@@ -46,7 +46,7 @@ def index(lang: str):
 def quiz(lang: str):
     if lang not in langs:
         return flask.abort(404)
-    return flask.render_template('quiz.html', quiz=quiz_json[lang])
+    return flask.render_template(f'{lang}/quiz.html', quiz=quiz_json[lang])
 
 
 @app.route('/<string:lang>/quiz/result/', methods=['GET', 'POST'])
