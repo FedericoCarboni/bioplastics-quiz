@@ -18,10 +18,12 @@
   </head>
   <body>
     <main role="main">
+      <!-- Container for the question -->
       <div class="container" id="question">
-        <h1 id="question-header"></h1>
-        <h4 class="text-muted" id="question-index"></h4>
+        <h1 id="question-header"><!-- The question text --></h1>
+        <h4 class="text-muted" id="question-index"><!-- The question index i.e. 'Question 3' --></h4>
         <hr>
+        <!-- This will trigger the hint() method of the quiz -->
         <button type="button" class="btn btn-primary" id="hint" onclick="quiz.hint();" title="Click for help">Hint</button>
         <div id="question-options">
           <div class="question-option">
@@ -39,14 +41,17 @@
         </div>
         <br>
         <div class="text-white" id="description">
-          <h3 id="description-header"></h3><hr>
-          <p id="description-body"></p>
+          <h3 id="description-header"><!-- This will be the header of the question description --></h3><hr>
+          <p id="description-body"><!-- This will be the description of the question --></p>
         </div>
         <br>
+        <!-- 'Next' button -->
         <button class="btn" id="next-question" type="button" onclick="quiz.next();"></button>
         <!-- Result form -->
         <form id="submit" action="result/" method="post" class="hidden">
+          <!-- This is the hidden field that will contain the score of the quiz -->
           <input type="hidden" id="submit-score" name="score">
+          <!-- The 'Finish' button -->
           <input type="submit" id="submit-btn" value="Finish" class="btn">
         </form>
       </div>

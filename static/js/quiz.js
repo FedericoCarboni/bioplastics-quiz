@@ -74,6 +74,9 @@ var Quiz = /** @class */ (function () {
     var submitScore = document.getElementById('submit-score');
     var submitButton = document.getElementById('submit-btn');
     var question = this.questions[this.index];
+    var letters = ['a', 'b', 'c', 'd'];
+    var answerText = question.options[letters.indexOf(answer)];
+    var correctAnswerText = question.options[letters.indexOf(question.answer)];
 
     /* Hiding 'Hint' button and question options */
     document.getElementById('hint').classList.add('hidden');
@@ -87,51 +90,62 @@ var Quiz = /** @class */ (function () {
     nextButton.classList.remove('btn-danger');
 
     /* Setting the quiz' description body */
-    descBody.innerText = question.description;
+    descBody.innerHTML = question.description;
 
     /* Checking if the answer is correct */
     if (question.answer == answer) {
-      this.score++;
-      /* Checking if the quiz is finished */
-      if (this.index == (this.questions.length - 1)) {
-        submit.classList.remove('hidden');
-        submitScore.value = this.score;
-        submitButton.classList.add('btn-success');
-      } else {
-        nextButton.classList.remove('hidden');
-        nextButton.classList.add('btn-success');
-      }
-
+      this.score++;      
       /* Setting the quiz' description header */
       descHeader.innerText = this.lang.descriptioncorrect;
 
       description.classList.add('bg-success');
-    } else {
+
+      /* Updating the 'Next' button and 'Finish' form last to avoid 
+      error 400 bad request, by Python */
       /* Checking if the quiz is finished */
       if (this.index == (this.questions.length - 1)) {
+        /* If it is this shows the form */
         submit.classList.remove('hidden');
         submitScore.value = this.score;
-        submitButton.classList.add('btn-danger');
+        submitButton.classList.add('btn-success');
       } else {
+        /* If it's not shows the 'Next' button */
         nextButton.classList.remove('hidden');
-        nextButton.classList.add('btn-danger');
+        nextButton.classList.add('btn-success');
       }
-
+    } else {
       /* Setting the quiz' description header */
       descHeader.innerText = this.lang.descriptionwrong;
 
       description.classList.add('bg-danger');
+
+      /* Updating the 'Next' button and 'Finish' form last to avoid 
+      error 400 bad request, by Python */
+      /* Checking if the quiz is finished */
+      if (this.index == (this.questions.length - 1)) {
+        /* If it is this shows the form */
+        submit.classList.remove('hidden');
+        submitScore.value = this.score;
+        submitButton.classList.add('btn-danger');
+      } else {
+        /* If it's not shows the 'Next' button */
+        nextButton.classList.remove('hidden');
+        nextButton.classList.add('btn-danger');
+      }
     }
   };
 
   function random(min, max, except) {
+    /* Generating a random number between the min and the max given */
     var num = Math.floor(Math.random() * (max - min + 1)) + min;
-    for (var i = 0; i < except.length; i++) {
-      if (num == except[i]) {
-        return random(min, max, except);
-      }
+    /* Checking if except contains the number generated */
+    if (except.indexOf(num) > -1) {
+      /* If it does this function will generate a new number */
+      return random(min, max, except);
+    } else {
+      /* If not it will just return the number generated */
+      return num;
     }
-    return num;
   }
 
   /** @method */ Quiz.prototype.hint = function () {
