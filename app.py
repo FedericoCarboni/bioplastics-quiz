@@ -28,6 +28,7 @@ class Result(db.Model):
 
 
 langs = ('en', 'it')
+difficulties = ('easy', 'normal', 'difficult')
 
 
 @app.route('/')

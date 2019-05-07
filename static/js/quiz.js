@@ -1,17 +1,63 @@
 /* Class wrapper for browser compatibility */
 var Quiz = /** @class */ (function () {
   /** @constructor */ function Quiz(json) {
-    var data = JSON.parse(json);
-    this.questions = data.questions;
-    this.lang = data.lang;
-    /* Initializing variables */
-    this.index = 0;
-    this.score = 0;
-    this.hints = 0;
+    /* Object  */ var data = JSON.parse(json);
+    /* this.difficulty = data.difficulty; */
+    /* Array   */ this.questions = data.questions;
+    /* Object  */ this.lang = data.lang;
+
+    /* The index of the current question, set to zero on class construction */
+    /* integer */ this.index = 0;
+
+    /* This is the score of the current question */
+    /* float   */ this.score = 1.0;
+
+    /* This is the number of hints used */
+    /* integer */ this.hints = 0;
+
+    /* This will be an Array of Objects containing a score and a weight */
+    /* Array   */ this.scores = [];
   }
+
+  /** @method */ Quiz.prototype.getScore = function () {
+    /* Returns the weighted average for all the questions answered */
+    /* float   */ var totalScore = 0.0;
+    var weights = [];
+    /* Looping to find and collect all unique weights */
+    for (var i = 0; i < this.scores.length; i++) {
+      var score = this.scores[i];
+      /* Check if 'weights' doesn't contain */
+      if (weights.indexOf(score.weight) == -1) {
+        /* Adding the current weight to weights */
+        weights.push(score.weight);
+      }
+    }
+    for (var w = 0; w < weights.length; w++) {
+      var weight = weights[i];
+      /* 'scores' will be the sum of the scores with the same weight
+      and 'number' will be the number of them */
+      var scores, number = 0;
+      for (var i = 0; i < this.scores.length; i++) {
+        var score = this.scores[i];
+        /* Checking if the weight of the score and the weight from 
+        'weights' ARE equal */
+        if (score.weight == weight) {
+          scores += score.score;
+          number++;  /* Increasing number by 1 */
+        }
+      }
+      /* Increasing 'totalScore' by the average of the scores with 
+      the same weight multiplied by their weight */
+      totalScore += scores / number * weight;
+    }
+    /* Returning the score as a percentage */
+    totalScore = Math.round(totalScore * 100);
+    return totalScore;
+  };
   
   /** @method */ Quiz.prototype.populate = function () {
     if (this.index == 0) {
+      /* Scrambling questions */
       for (var i = this.questions.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var tmp = this.questions[i];
@@ -20,6 +66,10 @@ var Quiz = /** @class */ (function () {
       }
       document.getElementById('next-question').innerText = this.lang.nextquestion;
     }
+
+    /* Resetting score to 1.0 */
+    this.score = 1.0;
+
     /* Hinding the description and the 'Next' button of the question */
     document.getElementById('description').classList.add('hidden');
     document.getElementById('next-question').classList.add('hidden');
@@ -30,7 +80,8 @@ var Quiz = /** @class */ (function () {
     /* Updating hints */
     var hint = document.getElementById('hint');
     hint.classList.remove('hidden');
-  
+    
+    /* Checking whether the hints are finished or not */
     if (this.hints < this.questions.length * 0.3) {
       hint.classList.remove('btn-secondary');
       hint.classList.add('btn-primary');
@@ -49,6 +100,9 @@ var Quiz = /** @class */ (function () {
     document.getElementById('question-header').innerText = question.prompt;
     document.getElementById('question-index').innerText = this.lang.questionindex.replace('%s', this.index + 1);
     var letters = ['a', 'b', 'c', 'd'];
+
+    /* Iterating over each option to return them to default classes, re-enabling them
+    and update their text to the corresponding question option text */
     for (var i = 0; i < letters.length; i++) {
       var option = document.getElementById(letters[i]);
       option.innerText = question.options[i];
@@ -57,9 +111,9 @@ var Quiz = /** @class */ (function () {
       option.disabled = false;
     }
   
-    /* Scrambling question options */
     var options = document.getElementById('question-options');
-    
+
+    /* Scrambling the order of the question options */
     for (var i = options.children.length; i >= 0; i--) {
       options.appendChild(options.children[Math.random() * i | 0]);
     }
@@ -94,7 +148,10 @@ var Quiz = /** @class */ (function () {
 
     /* Checking if the answer is correct */
     if (question.answer == answer) {
-      this.score++;      
+
+      /* Adding the score to the 'scores' field */
+      this.scores.push({score: this.score, weight: question.weight});
+
       /* Setting the quiz' description header */
       descHeader.innerText = this.lang.descriptioncorrect;
 
@@ -106,7 +163,7 @@ var Quiz = /** @class */ (function () {
       if (this.index == (this.questions.length - 1)) {
         /* If it is this shows the form */
         submit.classList.remove('hidden');
-        submitScore.value = this.score;
+        submitScore.value = this.getScore();
         submitButton.classList.add('btn-success');
       } else {
         /* If it's not shows the 'Next' button */
@@ -114,6 +171,10 @@ var Quiz = /** @class */ (function () {
         nextButton.classList.add('btn-success');
       }
     } else {
+
+      /* Adding the score to the 'scores' field */
+      this.scores.push({score: 0.0, weight: question.weight});
+
       /* Setting the quiz' description header */
       descHeader.innerText = this.lang.descriptionwrong;
 
@@ -174,7 +235,7 @@ var Quiz = /** @class */ (function () {
     hintButton.classList.remove('btn-primary');
     hintButton.classList.add('btn-secondary');
     hintButton.disabled = true;
-    hintButton.title = this.lang.hintused.replace('%s', Math.round(questions.length * 0.3) - hints);
+    hintButton.title = this.lang.hintused.replace('%s', Math.round(this.questions.length * 0.3) - this.hints);
   };
 
   /** @method */ Quiz.prototype.next = function () {
@@ -182,5 +243,6 @@ var Quiz = /** @class */ (function () {
     this.populate();
   };
 
+  /* Returning the now-class 'Quiz' */
   return Quiz;
 }());

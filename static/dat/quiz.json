@@ -10,7 +10,8 @@
                     "More than 500"
                 ],
                 "answer": "c",
-                "description": ""
+                "description": "",
+                "weight": 0.5
             },
             {
                 "prompt": "What is a polymer?",
@@ -21,7 +22,8 @@
                     "A molecule that attaches to another"
                 ],
                 "answer": "a",
-                "description": ""
+                "description": "",
+                "weight": 0.3
             },
             {
                 "prompt": "What are bioplastics?",
@@ -32,7 +34,8 @@
                     "A plastic made of renewable resources"
                 ],
                 "answer": "a",
-                "description": ""
+                "description": "",
+                "weight": 0.3
             },
             {
                 "prompt": "Can plastic be made out of the peel of a banana?",
@@ -43,7 +46,8 @@
                     "Scientists are still trying"
                 ],
                 "answer": "b",
-                "description": ""
+                "description": "",
+                "weight": 0.2
             },
             {
                 "prompt": "What is the continent that produces the most bioplastic?",
@@ -54,7 +58,8 @@
                     "Oceania"
                 ],
                 "answer": "b",
-                "description": ""
+                "description": "",
+                "weight": 0.3
             },
             {
                 "prompt": "How many polymers are produced by bioplastics industries in Italy?",
@@ -65,7 +70,8 @@
                     "19.000 tonnes"
                 ],
                 "answer": "c",
-                "description": ""
+                "description": "",
+                "weight": 0.5
             },
             {
                 "prompt": "How much is the complete revenue of bioplastics industries in Italy?",
@@ -76,7 +82,8 @@
                     "More than 600 millions of euros"
                 ],
                 "answer": "b",
-                "description": ""
+                "description": "",
+                "weight": 0.5
             },
             {
                 "prompt": "What is Ohoo?",
@@ -87,7 +94,8 @@
                     "A project that makes edible water bottles"
                 ],
                 "answer": "d",
-                "description": ""
+                "description": "",
+                "weight": 0.2
             },
             {
                 "prompt": "If a polymer is made out of natural materials, is it always biodegradable?",
@@ -98,7 +106,8 @@
                     "It depends from the chemical structure"
                 ],
                 "answer": "d",
-                "description": ""
+                "description": "",
+                "weight": 0.2
             },
             {
                 "prompt": "How many types of bioplastics exist?",
@@ -109,7 +118,8 @@
                     "There's only one type of bioplastic, vegetal"
                 ],
                 "answer": "b",
-                "description": ""
+                "description": "",
+                "weight": 0.3
             }
         ],
         "lang": {
