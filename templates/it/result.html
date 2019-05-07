@@ -2,15 +2,14 @@
 <html lang="it">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="author" content="Federico Carboni, Francesco Di Cesare, Davide Basile">
     <title>BioPlastics Quiz</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Main CSS file for the project -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-    <!-- Favicon -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.min.css') }}">
+    <!-- Setting Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
@@ -41,6 +40,77 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script>window.history.replaceState&&window.history.replaceState(null,null,window.location.href),Chart.defaults.global.tooltips.cornerRadius=3,Chart.defaults.global.tooltips.intersect=!1;var result=Number("{{ score }}"),average=Number("{{ average }}"),ctx=document.getElementById("chart"),chart=new Chart(ctx,{type:"bar",data:{labels:["Tu","La media"],datasets:[{label:"Punteggio",data:[result,average],backgroundColor:[6<=result?"#28a745":4<result?"#ffc107":"#dc3545","#6c757d"]}]},options:{legend:{display:!1},tooltips:{enabled:!0},scales:{yAxes:[{ticks:{beginAtZero:!0,min:0,max:10}}]}}}),chartData=JSON.parse('{{ chart_data|tojson }}'),lineChart=(ctx=document.getElementById("line-chart"),new Chart(ctx,{type:"line",data:chartData,options:{responsive:!0,legend:{display:!1},tooltips:{enabled:!0,callbacks:{labelColor:function(e,t){return{backgroundColor:"#007bff"}}}},scales:{yAxes:[{ticks:{beginAtZero:!0,min:0,max:10}}]}}}));</script>
+    <script>
+      if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+      }
+      Chart.defaults.global.tooltips.cornerRadius = 3;
+      Chart.defaults.global.tooltips.intersect = false;
+      var result = Number('{{ score }}');
+      var average = Number('{{ average }}');
+      var ctx = document.getElementById('chart');
+      var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Tu', 'La media'],
+          datasets: [{
+            label: 'Punteggio',
+            data: [result, average],
+            backgroundColor: [
+              (result >= 6) ? '#28a745' : (result > 4) ? '#ffc107' : '#dc3545',
+              '#6c757d'
+            ]
+          }]
+        },
+        options: {
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                min: 0,
+                max: 10
+              }
+            }]
+          }
+        }
+      });
+      var chartData = JSON.parse('{{ "" + chart_data|tojson|safe }}');
+      var ctx = document.getElementById('line-chart');
+      var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: chartData,
+        options: {
+          responsive: true,
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true,
+            callbacks: {
+                labelColor: function(tooltipItem, chart) {
+                  return {
+                    backgroundColor: '#007bff'
+                  };
+                }
+              }
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                min: 0,
+                max: 10
+              }
+            }]
+          }
+        }
+      });
+    </script>
   </body>
 </html>

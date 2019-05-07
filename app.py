@@ -39,14 +39,14 @@ def index_redirect():
 def index(lang: str):
     if lang not in langs:
         return flask.abort(404)
-    return flask.render_template(f'{lang}/index.html')
+    return flask.render_template(f'{lang}/index.min.html')
 
 
 @app.route('/<string:lang>/quiz/')
 def quiz(lang: str):
     if lang not in langs:
         return flask.abort(404)
-    return flask.render_template(f'{lang}/quiz.html', quiz=quiz_json[lang])
+    return flask.render_template(f'{lang}/quiz.min.html', quiz=quiz_json[lang])
 
 
 @app.route('/<string:lang>/quiz/result/', methods=['GET', 'POST'])
@@ -81,6 +81,6 @@ def result(lang: str):
                 data.append(avg)
         chart_data['datasets'].append({'label': 'Average per day' if lang == 'en' else 'Media giornaliera', 'data': data, 'borderColor': '#007bff'})
 
-        return flask.render_template(f'{lang}/result.html', score=score, average=average, chart_data=chart_data)
+        return flask.render_template(f'{lang}/result.min.html', score=score, average=average, chart_data=chart_data)
     else:
         return flask.redirect(f'/{lang}/quiz/')

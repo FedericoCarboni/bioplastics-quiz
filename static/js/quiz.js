@@ -1,7 +1,6 @@
 /* Class wrapper for browser compatibility */
 var Quiz = /** @class */ (function () {
-  /* Constructor function */
-  function Quiz(json) {
+  /** @constructor */ function Quiz(json) {
     var data = JSON.parse(json);
     this.questions = data.questions;
     this.lang = data.lang;
@@ -11,7 +10,7 @@ var Quiz = /** @class */ (function () {
     this.hints = 0;
   }
   
-  Quiz.prototype.populate = function () {
+  /** @method */ Quiz.prototype.populate = function () {
     if (this.index == 0) {
       for (var i = this.questions.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -66,7 +65,7 @@ var Quiz = /** @class */ (function () {
     }
   };
   
-  Quiz.prototype.check = function (answer) {
+  /** @method */ Quiz.prototype.check = function (answer) {
     var description = document.getElementById('description');
     var descHeader = document.getElementById('description-header');
     var descBody = document.getElementById('description-body');
@@ -135,7 +134,7 @@ var Quiz = /** @class */ (function () {
     return num;
   }
 
-  Quiz.prototype.hint = function () {
+  /** @method */ Quiz.prototype.hint = function () {
     this.hints++;
     this.score -= 0.5;
     var question = this.questions[this.index];
@@ -164,7 +163,7 @@ var Quiz = /** @class */ (function () {
     hintButton.title = this.lang.hintused.replace('%s', Math.round(questions.length * 0.3) - hints);
   };
 
-  Quiz.prototype.next = function () {
+  /** @method */ Quiz.prototype.next = function () {
     this.index++;
     this.populate();
   };

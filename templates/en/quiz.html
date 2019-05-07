@@ -2,17 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="author" content="Federico Carboni, Francesco Di Cesare, Davide Basile">
     <title>BioPlastics Quiz</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Main CSS file for the project -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.min.css') }}">
     <!-- Quiz CSS file for the project -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.css') }}">
-    <!-- Favicon -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.min.css') }}">
+    <!-- Setting Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
@@ -65,7 +64,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/quiz.min.js') }}" integrity="sha512-3eRykj34+nol9Yu2ZNQb3mu1HFN/YiEKxXlhAEaNfc/YF2eVikKT1MtMm6zkLSRD8mKZtYCLiBCrbsP8C50b5g" crossorigin="anonymous"></script>
     <script>
-      var quiz = new Quiz('{{ quiz|tojson }}');
+      var quiz = new Quiz('{{ "" + quiz|tojson|safe }}');
       quiz.populate();
     </script>
   </body>
