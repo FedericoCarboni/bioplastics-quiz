@@ -117,10 +117,11 @@ var Quiz = /** @class */ (function () {
       option.innerText = question.options[i];
       option.classList.add('btn');
       option.classList.add('btn-primary');
-      var quiz = this;
-      option.addEventListener('click', function () {
-        quiz.check(i);
-      });
+      option.onclick = (function (quiz, i) {
+        return function () {
+          quiz.check(i);
+        };
+      })(this, i);
       questionOption.appendChild(option);
       options.appendChild(questionOption);
     }
@@ -156,6 +157,8 @@ var Quiz = /** @class */ (function () {
 
     /* Setting the quiz' description body */
     descBody.innerHTML = question.description;
+
+    console.log(question.answer + ' ' + answer);
 
     /* Checking if the answer is correct */
     if (question.answer == answer) {
