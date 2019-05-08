@@ -117,9 +117,9 @@ var Quiz = /** @class */ (function () {
       option.innerText = question.options[i];
       option.classList.add('btn');
       option.classList.add('btn-primary');
-      var obj = this;
+      var quiz = this;
       option.addEventListener('click', function () {
-        obj.check(i);
+        quiz.check(i);
       });
       questionOption.appendChild(option);
       options.appendChild(questionOption);
