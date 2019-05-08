@@ -117,6 +117,9 @@ var Quiz = /** @class */ (function () {
       option.innerText = question.options[i];
       option.classList.add('btn');
       option.classList.add('btn-primary');
+      /* Setting 'onclick' function, this is a wrapped function 
+      because 'quiz' and 'i' are in a different scope than the 
+      function definition */
       option.onclick = (function (quiz, i) {
         return function () {
           quiz.check(i);
