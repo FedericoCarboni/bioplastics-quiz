@@ -106,7 +106,7 @@
                     "It depends from the chemical structure"
                 ],
                 "answer": 3,
-                "description": "",
+                "description": "Plastics of type B, which are green plastics (bio-Pe, Bio-PP, Bio-PVC e bio-PET), polymers from renewable sources, but not biodegradable.",
                 "weight": 0.2
             },
             {
@@ -118,7 +118,7 @@
                     "There's only one type of bioplastic, vegetal"
                 ],
                 "answer": 1,
-                "description": "",
+                "description": "Bioplastics have three types, type A: polymers with a biological base from renewable sources and biodegradable; type B: polymers from renewable sources, but not biodegradable and type C: polymers from non renewable sources, but biodegradable.",
                 "weight": 0.3
             }
         ],
