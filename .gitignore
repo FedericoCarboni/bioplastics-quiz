@@ -1,4 +1,3 @@
-run.py
-packager.py
-*.db
 __pycache__/
+run.py
+*.db
