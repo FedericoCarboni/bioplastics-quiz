@@ -1,7 +1,7 @@
 /* Class wrapper for browser compatibility */
 var Quiz = /** @class */ (function () {
   /** @constructor */ function Quiz(json) {
-    /* Object  */ var data = JSON.parse(json);
+    var data = JSON.parse(json);
     /* this.difficulty = data.difficulty; */
     /* Array   */ this.questions = data.questions;
     /* Object  */ this.lang = data.lang;
@@ -32,15 +32,15 @@ var Quiz = /** @class */ (function () {
         weights.push(score.weight);
       }
     }
-    for (var w = 0; w < weights.length; w++) {
-      var weight = weights[i];
+    for (/* integer */ var w = 0; w < weights.length; w++) {
+      /* float */ var weight = weights[w];
       /* 'scores' will be the sum of the scores with the same weight
       and 'number' will be the number of them */
       var scores, number = 0;
       for (var i = 0; i < this.scores.length; i++) {
-        var score = this.scores[i];
+        /* Object */ var score = this.scores[i];
         /* Checking if the weight of the score and the weight from 
-        'weights' ARE equal */
+        'weights' are equal */
         if (score.weight == weight) {
           scores += score.score;
           number++;  /* Increasing number by 1 */
