@@ -9,7 +9,7 @@
                     "Between 400 e 500",
                     "More than 500"
                 ],
-                "answer": "c",
+                "answer": 2,
                 "description": "",
                 "weight": 0.5
             },
@@ -21,20 +21,20 @@
                     "A set of repetitive units",
                     "A molecule that attaches to another"
                 ],
-                "answer": "a",
-                "description": "",
+                "answer": 0,
+                "description": "A polymer (word coined from the greek words “πολύς” and “μέφος”, translated many parts) is a set of giant molecules (macromolecules) made up of many chains called repetitive units, kept together by covalent bonds.",
                 "weight": 0.3
             },
             {
                 "prompt": "What are bioplastics?",
                 "options": [
                     "There's no official definitions",
-                    "Una plastica che deriva anche solo in parte da risorse rinnovabili o è biodegradable A plastic made at least partly of renewable resources or that is biodegradable",
+                    "A plastic made at least partly of renewable resources or that is biodegradable",
                     "A biodegradable plastic",
                     "A plastic made of renewable resources"
                 ],
-                "answer": "a",
-                "description": "",
+                "answer": 0,
+                "description": "There is not an official definition, but the definition approved the most (by European Bioplastic): “A material can be defined [a bioplastic] if it fulfills at least one of these characteristics: is made, at least partly, from renewable resources or it's biodegradable”.",
                 "weight": 0.3
             },
             {
@@ -45,44 +45,44 @@
                     "There have been no experiments regarding this",
                     "Scientists are still trying"
                 ],
-                "answer": "b",
-                "description": "",
+                "answer": 0,
+                "description": "In 2013, at the age of 16, the student Elif Bilgin discovered the process through which plastic can be made out of a banana peel. Elif won the first prize, consisting of 50 thousand dollars, at the contest 'Scientific American Science in Action'.",
                 "weight": 0.2
             },
             {
-                "prompt": "What is the continent that produces the most bioplastic?",
+                "prompt": "Which continent produces the most bioplastic?",
                 "options": [
                     "Europe",
                     "Asia",
                     "North America",
                     "Oceania"
                 ],
-                "answer": "b",
-                "description": "",
+                "answer": 1,
+                "description": "Asia produces 55% of the 2.11 million tonnes of bioplastics, Oceania 1%, Europe 19%, North America 16%, South America 9% and Africa doesn't produce it. (statistics from 2018)",
                 "weight": 0.3
             },
             {
-                "prompt": "How many polymers are produced by bioplastics industries in Italy?",
+                "prompt": "How much bioplastic is produced by industries in Italy?",
                 "options": [
                     "117.000 tonnes",
                     "52.000 tonnes",
                     "73.000 tonnes",
                     "19.000 tonnes"
                 ],
-                "answer": "c",
+                "answer": 2,
                 "description": "",
                 "weight": 0.5
             },
             {
                 "prompt": "How much is the complete revenue of bioplastics industries in Italy?",
                 "options": [
-                    "Between 200 e 400 millions of euros",
-                    "Between 450 e 600 millions of euros",
-                    "Less than 200 millions of euros",
-                    "More than 600 millions of euros"
+                    "Between 200 e 400 million euros",
+                    "Between 450 e 600 million euros",
+                    "Less than 200 million euros",
+                    "More than 600 million euros"
                 ],
-                "answer": "b",
-                "description": "",
+                "answer": 1,
+                "description": "In 2017 italian industries invoiced 545 million euros, with 2450 dedicated workers (source Plastic Consult)",
                 "weight": 0.5
             },
             {
@@ -93,8 +93,8 @@
                     "A company that recycles bioplastics",
                     "A project that makes edible water bottles"
                 ],
-                "answer": "d",
-                "description": "",
+                "answer": 3,
+                "description": "Three designers from London, Rodrigo Garcia, Pierre Paslier and Guillaume Couche won the Lexus Design Award for the invention of an edible water bottle made from a double layer in sodium alginate extracted from brown algae and sodium chloride",
                 "weight": 0.2
             },
             {
@@ -105,7 +105,7 @@
                     "Scientists haven't conducted any research about it",
                     "It depends from the chemical structure"
                 ],
-                "answer": "d",
+                "answer": 3,
                 "description": "",
                 "weight": 0.2
             },
@@ -117,7 +117,7 @@
                     "5 types: 1, 2, 3, 4, 5",
                     "There's only one type of bioplastic, vegetal"
                 ],
-                "answer": "b",
+                "answer": 1,
                 "description": "",
                 "weight": 0.3
             }
@@ -143,7 +143,7 @@
                     "Tra 400 e 500",
                     "Più di 500"
                 ],
-                "answer": "c",
+                "answer": 2,
                 "description": ""
             },
             {
@@ -154,8 +154,8 @@
                     "Un insieme di unità ripetitive",
                     "Una micro molecola che si unisce ad un'altra"
                 ],
-                "answer": "a",
-                "description": "Un polimero (parola creata dall'unione delle parole greche “πολύς” e “μέφος” = molte parti) è un insieme di molecole giganti (macromolecole) costituite da tanti mattoncini detti unità ripetitive tenute insieme da legami covalenti."
+                "answer": 0,
+                "description": "Un polimero (parola coniata dall'unione delle parole greche “πολύς” e “μέφος”, tradotto molte parti) è un insieme di molecole giganti (macromolecole) costituite da tanti mattoncini detti unità ripetitive tenute insieme da legami covalenti."
             },
             {
                 "prompt": "Cosa sono le bioplastiche?",
@@ -165,8 +165,8 @@
                     "Una plastica biodegradabile",
                     "Una plastica che proviene da fonti rinnovabili"
                 ],
-                "answer": "a",
-                "description": "Non c'è una definizione che vada bene per tutti, ma la definizione più condivisa(dell'European Bioplastic): 'Un materiale può essere definito se possiede almeno una di queste caratteristiche: deriva, anche solo in parte, da risorse rinnovabili o è biodegradabile.'"
+                "answer": 0,
+                "description": "Non c'è una definizione che vada bene per tutti, ma la definizione più condivisa (dell'European Bioplastic): “Un materiale può essere definito se possiede almeno una di queste caratteristiche: deriva, anche solo in parte, da risorse rinnovabili o è biodegradabile.”"
             },
             {
                 "prompt": "Si può creare una plastica attraverso una buccia di banana?",
@@ -176,7 +176,7 @@
                     "Non ci sono ancora esperimenti a riguardo",
                     "Gli studi sono ancora in corso"
                 ],
-                "answer": "b",
+                "answer": 0,
                 "description": "Nel 2013, a 16 anni, la studentessa Elif Bilgin ha scoperto il processo con il quale creare plastica attraverso la buccia di banana. La studentessa ha vinto il primo premio, ovvero 50 mila dollari, al concorso 'Scientific American Science in Action' per questo processo che permette di creare bioplastiche."
             },
             {
@@ -187,8 +187,8 @@
                     "Nord America",
                     "Oceania"
                 ],
-                "answer": "b",
-                "description": "L'Asia, delle 2.11 milioni di tonnellate di bioplastiche, produce il 55% di esse, l'Oceania 1%, l'Europa il 19%, gli L'America del Nord il 16%, l'America del Sud 9% e l'Africa non ne produce(dati del 2018)."
+                "answer": 1,
+                "description": "L'Asia produce il 55% delle 2.11 milioni di tonnellate di bioplastiche, l'Oceania 1%, l'Europa il 19%, gli L'America del Nord il 16%, l'America del Sud 9% e l'Africa non ne produce. (statistiche del 2018)"
             },
             {
                 "prompt": "Quanti sono i polimeri lavorati dalle industrie delle bioplastiche in Italia?",
@@ -198,18 +198,18 @@
                     "73.000 tonnellate ",
                     "19.000 tonnellate"
                 ],
-                "answer": "c",
-                "description": "I settori applicativi in cui vengono usate queste plastiche sono: 68% sono shopper monouso per la spesa, 13% sono sacchi per la raccolta della frazione organica, 19% sono manufatti per l'agricoltura, ristorazione, packaging alimentare ed igene della persona."
+                "answer": 2,
+                "description": "I settori applicativi prevalenti delle bioplastiche sono i seguenti: 68% per shopper monouso per la spesa, 13% per sacchi per la raccolta della frazione organica, 19% per strumenti agricoli, ristorazione, packaging alimentare ed igene della persona."
             },
             {
-                "prompt": "Quanto è il fatturato complessivo delle aziende di bioplastiche in Italia?",
+                "prompt": "Quanto è il fatturato complessivo delle aziende di bioplastiche in Italia (annuale)?",
                 "options": [
                     "Tra 200 e 400 milioni di euro",
                     "Tra 450 e 600 milioni di euro",
                     "Meno di 200 milioni di euro",
                     "Più di 600 milioni di euro"
                 ],
-                "answer": "b",
+                "answer": 1,
                 "description": "Nel 2017 le industrie italiane hanno fatturato 545 milioni di euro, con 2450 addetti dedicati (fonte Plastic Consult)"
             },
             {
@@ -220,7 +220,7 @@
                     "Un'azienda che ricicla le bioplastiche in posate",
                     "Un progetto che crea una bottiglia d'acqua commestibile"
                 ],
-                "answer": "d",
+                "answer": 3,
                 "description": "Tre designer di Londra, Rodrigo Garcia, Gonzalez, Pierre Paslier e Guillaume Couche hanno vinto il premio Lexus Design Award per l'invenzione di una bottiglia commestibile per l'acqua costituita da una doppia membrana in alginato di sodio ricavato dalle alghe brune e da cloruro di calcio."
             },
             {
@@ -231,7 +231,7 @@
                     "Gli scienziati non hanno fatto ancora studi a riguardo",
                     "Dipende dalla struttura chimica"
                 ],
-                "answer": "d",
+                "answer": 3,
                 "description": "Le plastiche di tipo B, ovvero le plastiche verdi (bio-Pe, Bio-PP, Bio-PVC e bio-PET), polimeri derivati da fonti rinnovabili, ma non biodegradabili."
             },
             {
@@ -242,7 +242,7 @@
                     "5 tipi: 1, 2, 3, 4, 5",
                     "C'è solo un tipo di bioplastiche, quelle vegetali"
                 ],
-                "answer": "b",
+                "answer": 1,
                 "description": "Le bioplastiche sono di 3 tipi: tipo A: polimeri a base biologica derivati da fonti rinnovabili e biodegradabili; tipo B: polimeri derivati da fonti rinnovabili, ma non biodegradabili; tipo C: polimeri derivati da fonti non rinnovabili, ma biodegradabili."
             }
         ],

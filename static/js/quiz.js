@@ -99,19 +99,31 @@ var Quiz = /** @class */ (function () {
     /* Updating the question header and body */
     document.getElementById('question-header').innerText = question.prompt;
     document.getElementById('question-index').innerText = this.lang.questionindex.replace('%s', this.index + 1);
-    var letters = ['a', 'b', 'c', 'd'];
-
-    /* Iterating over each option to return them to default classes, re-enabling them
-    and update their text to the corresponding question option text */
-    for (var i = 0; i < letters.length; i++) {
-      var option = document.getElementById(letters[i]);
-      option.innerText = question.options[i];
-      option.classList.remove('btn-danger');
-      option.classList.add('btn-primary');
-      option.disabled = false;
-    }
   
     var options = document.getElementById('question-options');
+
+    /* Clearing all options */
+    while (options.firstChild) {
+      options.removeChild(options.firstChild);
+    }
+
+    /* Iterating over each option to update their text to the corresponding 
+    question option text */
+    for (var i = 0; i < question.options.length; i++) {
+      var questionOption = document.createElement('div');
+      questionOption.classList.add('question-option');
+      var option = document.createElement('button');
+      option.id = 'option-' + i;
+      option.innerText = question.options[i];
+      option.classList.add('btn');
+      option.classList.add('btn-primary');
+      var obj = this;
+      option.addEventListener('click', function () {
+        obj.check(i);
+      });
+      questionOption.appendChild(option);
+      options.appendChild(questionOption);
+    }
 
     /* Scrambling the order of the question options */
     for (var i = options.children.length; i >= 0; i--) {
@@ -128,9 +140,8 @@ var Quiz = /** @class */ (function () {
     var submitScore = document.getElementById('submit-score');
     var submitButton = document.getElementById('submit-btn');
     var question = this.questions[this.index];
-    var letters = ['a', 'b', 'c', 'd'];
-    var answerText = question.options[letters.indexOf(answer)];
-    var correctAnswerText = question.options[letters.indexOf(question.answer)];
+    var answerText = question.options[answer];
+    var correctAnswerText = question.options[question.answer];
 
     /* Hiding 'Hint' button and question options */
     document.getElementById('hint').classList.add('hidden');
@@ -211,25 +222,24 @@ var Quiz = /** @class */ (function () {
 
   /** @method */ Quiz.prototype.hint = function () {
     this.hints++;
-    this.score -= 0.5;
+    this.score -= 0.5; /* Removing 0.5 from the score */
     var question = this.questions[this.index];
     var hintButton = document.getElementById('hint');
+
+    var exclusions = [question.answer];
     
-    /* Choosing two random options */
-    var letters = ['a', 'b', 'c', 'd'];
-    var max = letters.length - 1;
-    var index1 = random(0, max, [letters.indexOf(question.answer)]);
-    var index2 = random(0, max, [letters.indexOf(question.answer), index1]);
-    var option1 = document.getElementById(letters[index1]);
-    var option2 = document.getElementById(letters[index2]);
-    
-    /* Disabling the options chosen */
-    option1.classList.remove('btn-primary');
-    option2.classList.remove('btn-primary');
-    option1.classList.add('btn-danger');
-    option2.classList.add('btn-danger');
-    option1.disabled = true;
-    option2.disabled = true;
+    /* Removing half of the question's options */
+    for (var i = 0; i < question.options.length / 2; i++) {
+      /* Choosing a random index */
+      var index = random(0, question.options.length - 1, exclusions);
+      var option = document.getElementById('option-' + index);
+      /* Disabling the option chosen */
+      option.classList.remove('btn-primary');
+      option.classList.add('btn-danger');
+      option.disabled = true;
+      /* Adding the current index to the exclusions */
+      exclusions.push(index);
+    }
     
     /* Disabling the 'hint' button */
     hintButton.classList.remove('btn-primary');
