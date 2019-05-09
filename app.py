@@ -28,7 +28,6 @@ class Result(db.Model):
 
 
 langs = ('en', 'it')
-difficulties = ('easy', 'normal', 'difficult')
 
 
 @app.route('/')
@@ -59,7 +58,7 @@ def result(lang: str):
         average = sum(results) / len(results) if len(results) != 0 else 0
         score = flask.request.form.get('score')
         score = score if score is not None else flask.abort(400)
-        score = float(score) if score.isdigit() else flask.abort(400)
+        score = int(score) if score.isdigit() else flask.abort(400)
         db.session.add(Result(score=score, time=datetime.datetime.utcnow().strftime('%d/%m/%Y')))
         db.session.commit()
         tmp = []

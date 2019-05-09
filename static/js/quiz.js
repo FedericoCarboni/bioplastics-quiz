@@ -2,26 +2,21 @@
 var Quiz = /** @class */ (function () {
   /** @constructor */ function Quiz(json) {
     var data = JSON.parse(json);
-    /* this.difficulty = data.difficulty; */
-    /* Array   */ this.questions = data.questions;
-    /* Object  */ this.lang = data.lang;
-
+    this.questions = data.questions;
+    this.lang = data.lang;
     /* The index of the current question, set to zero on class construction */
-    /* integer */ this.index = 0;
-
-    /* This is the score of the current question */
-    /* float   */ this.score = 1.0;
-
+    this.index = 0;
+    /* This is whether a hint has been used for the current question */
+    this.hint = false;
     /* This is the number of hints used */
-    /* integer */ this.hints = 0;
-
+    this.hints = 0;
     /* This will be an Array of Objects containing a score and a weight */
-    /* Array   */ this.scores = [];
+    this.scores = [];
   }
 
   /** @method */ Quiz.prototype.getScore = function () {
     /* Returns the weighted average for all the questions answered */
-    /* float   */ var totalScore = 0.0;
+    var totalScore = 0.0;
     var weights = [];
     /* Looping to find and collect all unique weights */
     for (var i = 0; i < this.scores.length; i++) {
@@ -36,7 +31,8 @@ var Quiz = /** @class */ (function () {
       /* float */ var weight = weights[w];
       /* 'scores' will be the sum of the scores with the same weight
       and 'number' will be the number of them */
-      var scores, number = 0;
+      var scores = 0;
+      var number = 0;
       for (var i = 0; i < this.scores.length; i++) {
         /* Object */ var score = this.scores[i];
         /* Checking if the weight of the score and the weight from 
@@ -66,9 +62,6 @@ var Quiz = /** @class */ (function () {
       }
       document.getElementById('next-question').innerText = this.lang.nextquestion;
     }
-
-    /* Resetting score to 1.0 */
-    this.score = 1.0;
 
     /* Hinding the description and the 'Next' button of the question */
     document.getElementById('description').classList.add('hidden');
@@ -161,13 +154,17 @@ var Quiz = /** @class */ (function () {
     /* Setting the quiz' description body */
     descBody.innerHTML = question.description;
 
-    console.log(question.answer + ' ' + answer);
-
     /* Checking if the answer is correct */
     if (question.answer == answer) {
 
+      if (this.hint) {
+        var score = 0.6;
+      } else {
+        var score = 1.0;
+      }
+
       /* Adding the score to the 'scores' field */
-      this.scores.push({score: this.score, weight: question.weight});
+      this.scores.push({score: score, weight: question.weight});
 
       /* Setting the quiz' description header */
       descHeader.innerText = this.lang.descriptioncorrect;
@@ -186,8 +183,8 @@ var Quiz = /** @class */ (function () {
         submit.classList.remove('hidden');
       } else {
         /* If it's not shows the 'Next' button */
-        nextButton.classList.remove('hidden');
         nextButton.classList.add('btn-success');
+        nextButton.classList.remove('hidden');
       }
     } else {
 
@@ -205,7 +202,7 @@ var Quiz = /** @class */ (function () {
       if (this.index == (this.questions.length - 1)) {
         /* If it is this shows the form */
         submit.classList.remove('hidden');
-        submitScore.value = this.score;
+        submitScore.value = this.scores;
         submitButton.classList.add('btn-danger');
       } else {
         /* If it's not shows the 'Next' button */
@@ -230,7 +227,6 @@ var Quiz = /** @class */ (function () {
 
   /** @method */ Quiz.prototype.hint = function () {
     this.hints++;
-    this.score -= 0.5; /* Removing 0.5 from the score */
     var question = this.questions[this.index];
     var hintButton = document.getElementById('hint');
 
