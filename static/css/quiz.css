@@ -3,12 +3,19 @@
 }
 
 #description {
-  border-radius: 10px;
+  border-radius: 8px;
   width: 60%;
-  margin-left: 20%;
+  margin: auto;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   border-top: 2px;
+  text-align: center;
+}
+
+#description p {
+  text-align: justify;
+  width: 80%;
+  margin: auto;
 }
 
 #description hr {
@@ -41,17 +48,12 @@
     margin-top: 30px;
   }
 
-  .question-option button {
+  #description {
     width: 80%;
+    margin: auto;
   }
 
   .question-option button {
     width: 80%;
-    margin-left: 10%;
-  }
-
-  #description p {
-    width: 100%;
-    margin-left: 0;
   }
 }
