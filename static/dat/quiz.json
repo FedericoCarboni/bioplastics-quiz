@@ -107,7 +107,7 @@
                 ],
                 "answer": 3,
                 "description": "Plastics of type B, which are green plastics (bio-Pe, Bio-PP, Bio-PVC e bio-PET), polymers from renewable sources, but not biodegradable.",
-                "weight": 0.2
+                "weight": 0.5
             },
             {
                 "prompt": "How many types of bioplastics exist?",
@@ -193,10 +193,10 @@
             {
                 "prompt": "Quanti sono i polimeri lavorati dalle industrie delle bioplastiche in Italia?",
                 "options": [
-                    "117.000 tonnellate",
-                    "52.000 tonnellate",
-                    "73.000 tonnellate ",
-                    "19.000 tonnellate"
+                    "117000 tonnellate",
+                    "52000 tonnellate",
+                    "73000 tonnellate",
+                    "19000 tonnellate"
                 ],
                 "answer": 2,
                 "description": "I settori applicativi prevalenti delle bioplastiche sono i seguenti: 68% per shopper monouso per la spesa, 13% per sacchi per la raccolta della frazione organica, 19% per strumenti agricoli, ristorazione, packaging alimentare ed igene della persona."
