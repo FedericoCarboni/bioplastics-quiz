@@ -7,7 +7,7 @@ var Quiz = /** @class */ (function () {
     /* The index of the current question, set to zero on class construction */
     this.index = 0;
     /* This is whether a hint has been used for the current question */
-    this.hint = false;
+    this.hintUsed = false;
     /* This is the number of hints used */
     this.hints = 0;
     /* This will be an Array of Objects containing a score and a weight */
@@ -62,6 +62,8 @@ var Quiz = /** @class */ (function () {
       }
       document.getElementById('next-question').innerText = this.lang.nextquestion;
     }
+
+    this.hintUsed = false;
 
     /* Hinding the description and the 'Next' button of the question */
     document.getElementById('description').classList.add('hidden');
@@ -137,8 +139,6 @@ var Quiz = /** @class */ (function () {
     var submitScore = document.getElementById('submit-score');
     var submitButton = document.getElementById('submit-btn');
     var question = this.questions[this.index];
-    var answerText = question.options[answer];
-    var correctAnswerText = question.options[question.answer];
 
     /* Hiding 'Hint' button and question options */
     document.getElementById('hint').classList.add('hidden');
@@ -157,7 +157,7 @@ var Quiz = /** @class */ (function () {
     /* Checking if the answer is correct */
     if (question.answer == answer) {
 
-      if (this.hint) {
+      if (this.hintUsed) {
         var score = 0.6;
       } else {
         var score = 1.0;
@@ -227,6 +227,7 @@ var Quiz = /** @class */ (function () {
 
   /** @method */ Quiz.prototype.hint = function () {
     this.hints++;
+    this.hintUsed = true;
     var question = this.questions[this.index];
     var hintButton = document.getElementById('hint');
 

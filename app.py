@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///results.db'
 
 db = SQLAlchemy(app)
 
-with app.open_resource('static/dat/quiz.json') as f:
+with app.open_resource('static/dat/quiz.min.json') as f:
     quiz_json = json.load(f)
 
 class Result(db.Model):
@@ -55,7 +55,7 @@ def result(lang: str):
         return flask.abort(404)
     if flask.request.method == 'POST':
         results = Result.query.all()
-        average = sum(results) / len(results) if len(results) != 0 else 0
+        average = int(sum(results) / len(results)) if len(results) != 0 else 0
         score = flask.request.form.get('score')
         score = score if score is not None else flask.abort(400)
         score = int(score) if score.isdigit() else flask.abort(400)
@@ -76,11 +76,11 @@ def result(lang: str):
             for item in results:
                 if item.time == time:
                     temp.append(item)
-            avg = sum(temp) / len(temp) if len(temp) != 0 else -1
+            avg = int(sum(temp) / len(temp)) if len(temp) != 0 else -1
             if avg != -1:
                 data.append(avg)
         chart_data['datasets'].append({'label': 'Average per day' if lang == 'en' else 'Media giornaliera', 'data': data, 'borderColor': '#007bff'})
-
-        return flask.render_template(f'{lang}/result.min.html', score=score, average=average, chart_data=chart_data)
+        result_text = quiz_json[lang]['lang'].get('resultaboveaverage' if score > average else 'resultunderaverage')
+        return flask.render_template(f'{lang}/result.min.html', result_text=result_text, score=score, average=average, chart_data=chart_data)
     else:
         return flask.redirect(f'/{lang}/quiz/')
