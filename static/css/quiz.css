@@ -49,11 +49,11 @@
   }
 
   #description {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 
   .question-option button {
-    width: 80%;
+    width: 90%;
   }
 }

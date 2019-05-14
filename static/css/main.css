@@ -40,11 +40,11 @@ footer {
 @media (max-width: 980px) {
 
   .container hr {
-    width: 80%;
+    width: 90%;
   }
 
   .container p {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -66,12 +66,12 @@ footer {
   }
 
   .chart {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 
   .footer {
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
 }

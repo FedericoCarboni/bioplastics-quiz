@@ -27,7 +27,7 @@ class Result(db.Model):
         return self.score + other
 
 
-langs = ('en', 'it')
+langs = list(quiz_json.keys())
 
 
 @app.route('/')
@@ -79,7 +79,7 @@ def result(lang: str):
             avg = int(sum(temp) / len(temp)) if len(temp) != 0 else -1
             if avg != -1:
                 data.append(avg)
-        chart_data['datasets'].append({'label': 'Average per day' if lang == 'en' else 'Media giornaliera', 'data': data, 'borderColor': '#007bff'})
+        chart_data['datasets'].append({'label': quiz_json[lang]['lang']['averageperday'], 'data': data, 'borderColor': '#007bff'})
         result_text = quiz_json[lang]['lang'].get('resultaboveaverage' if score > average else 'resultunderaverage')
         return flask.render_template(f'{lang}/result.min.html', result_text=result_text, score=score, average=average, chart_data=chart_data)
     else:

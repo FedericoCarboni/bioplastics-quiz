@@ -131,6 +131,7 @@
             "descriptionwrong": "Wrong. You'll do better next time!",
             "nextquestion": "Next Question",
             "finish": "Finish",
+            "averageperday": "Average per day",
             "resultaboveaverage": "Your score is above average, well done!",
             "resultunderaverage": "Your score is under average, try again?"
         }
@@ -267,6 +268,7 @@
             "descriptionwrong": "Sbagliato. Farai meglio la prossima volta!",
             "nextquestion": "Prossima Domanda",
             "finish": "Finisci",
+            "averageperday": "Media giornaliera",
             "resultaboveaverage": "Your score is above average, well done!",
             "resultunderaverage": "Your score is under average, try again?"
         }
