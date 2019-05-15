@@ -38,13 +38,14 @@ footer {
 }
 
 @media (max-width: 980px) {
-
   .container hr {
     width: 90%;
   }
 
   .container p {
     width: 90%;
+    margin: auto;
+    padding-bottom: 0.6rem;
   }
 }
 
@@ -74,4 +75,19 @@ footer {
     width: 90%;
     margin: auto;
   }
+}
+
+.noscript {
+  width: 100%;
+  height: 100vh;
+  background-color: #dc3545;
+}
+
+.noscript p {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  max-width: 80%;
+  margin: auto;
+  padding-top: 5rem;
 }

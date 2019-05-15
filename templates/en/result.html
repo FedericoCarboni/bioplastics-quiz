@@ -20,73 +20,77 @@
 {% block script %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
   <script>
-    if(window.history.replaceState)window.history.replaceState(null,null,window.location.href);
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+    }
     Chart.defaults.global.tooltips.cornerRadius = 3;
     Chart.defaults.global.tooltips.intersect = false;
-    var result = Number('{{ score }}');
-    var average = Number('{{ average }}');
-    var ctx = document.getElementById('chart');
-    var chart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['You', 'Average'],
-        datasets: [{
-          label: 'Score',
-          data: [result, average],
-          backgroundColor: [
-            (result >= 6) ? '#28a745' : (result > 4) ? '#ffc107' : '#dc3545',
-            '#6c757d'
-          ]
-        }]
-      },
-      options: {
-        legend: {
-          display: false
-        },
-        tooltips: {
-          enabled: true
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true,
-              min: 0,
-              max: 100
-            }
+    (function () {
+      var result = parseInt('{{ score }}');
+      var average = parseInt('{{ average }}');
+      var ctx = document.getElementById('chart');
+      var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['You', 'Average'],
+          datasets: [{
+            label: 'Score',
+            data: [result, average],
+            backgroundColor: [
+              (result >= 6 || result > average) ? '#28a745' : (result > 4) ? '#ffc107' : '#dc3545',
+              '#6c757d'
+            ]
           }]
-        }
-      }
-    });
-    var chartData = JSON.parse('{{ "" + chart_data|tojson|safe }}');
-    var ctx = document.getElementById('line-chart');
-    var lineChart = new Chart(ctx, {
-      type: 'line',
-      data: chartData,
-      options: {
-        responsive: true,
-        legend: {
-          display: false
         },
-        tooltips: {
-          enabled: true,
-          callbacks: {
-              labelColor: function(tooltipItem, chart) {
-                return {
-                  backgroundColor: '#007bff'
-                };
+        options: {
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                min: 0,
+                max: 100
               }
-            }
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true,
-              min: 0,
-              max: 100
-            }
-          }]
+            }]
+          }
         }
-      }
-    });
+      });
+      var chartData = JSON.parse('{{ "" + chart_data|tojson|safe }}');
+      var ctx = document.getElementById('line-chart');
+      var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: chartData,
+        options: {
+          responsive: true,
+          legend: {
+            display: false
+          },
+          tooltips: {
+            enabled: true,
+            callbacks: {
+                labelColor: function(tooltipItem, chart) {
+                  return {
+                    backgroundColor: '#007bff'
+                  };
+                }
+              }
+          },
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                min: 0,
+                max: 100
+              }
+            }]
+          }
+        }
+      });
+    }());
   </script>
 {% endblock %}

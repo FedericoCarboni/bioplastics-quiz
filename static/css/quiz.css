@@ -12,6 +12,11 @@
   text-align: center;
 }
 
+#description-header {
+  width: 80%;
+  margin: auto;
+}
+
 #description p {
   text-align: justify;
   width: 80%;
@@ -49,6 +54,11 @@
   }
 
   #description {
+    width: 90%;
+    margin: auto;
+  }
+
+  #description-header {
     width: 90%;
     margin: auto;
   }
