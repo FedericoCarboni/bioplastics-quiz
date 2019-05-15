@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///results.db'
 
 db = SQLAlchemy(app)
 
-with app.open_resource('static/dat/quiz.min.json') as f:
+with app.open_resource('static/dat/quiz.json') as f:
     quiz_json = json.load(f)
 
 class Result(db.Model):

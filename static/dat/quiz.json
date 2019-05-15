@@ -120,6 +120,282 @@
                 "answer": 1,
                 "description": "There are three types of bioplastics, type A: polymers with a biological base from renewable sources and biodegradable; type B: polymers from renewable sources, but not biodegradable and type C: polymers from non renewable sources, but biodegradable.",
                 "weight": 0.3
+            },
+            {
+                "prompt": "What is a biopolymer?",
+                "options": [
+                    "A polymer from renewable resources",
+                    "There is not an official definition",
+                    "Biodegradable macromolecules with an entirely biological base",
+                    "A polymer from biodegradable resources"
+                ],
+                "answer": 2,
+                "description": "This category of polymers includes the ones already present in nature like proteins and polysaccharides, and the ones used primarily in medical department as substitutes for various chemical compounds in the human body.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "What is a “green plastic”?",
+                "options": [
+                    "A polymer from renewable resources",
+                    "There is not an official definition",
+                    "Biodegradable macromolecules with an entirely biological base",
+                    "A polymer from biodegradable resources"
+                ],
+                "answer": 0,
+                "description": "Green plastics are a more ecological version of polymers from petrol (PP, PE, PVC, PET). Their monomers from renewable resources such as bioethanol (from sugar canes) but the final polymer is identical to the one from fossil resources, so it’s not biodegradable. Its production cycle produces less greenhouse gases and has a lower “carbon footprint”.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "What is the total amount of bioplastics produced in 2018 (million tonnes)?",
+                "options": [
+                    "Less than 1",
+                    "Between 2 and 3",
+                    "Between 3 and 4",
+                    "More than 4"
+                ],
+                "answer": 1,
+                "description": "In 2018 the world production capacities of bioplastics were 2.11 million tonnes, the most of which was used for packaging 66%, followed by textiles 10%, agriculture 7%, consumer goods 6%, coating and adhesives 5%, building ~1%, electronics ~1% and other 1%.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "In which sector plastics are used the most?",
+                "options": [
+                    "Packaging",
+                    "Automotive",
+                    "Building",
+                    "Agriculture"
+                ],
+                "answer": 0,
+                "description": "Plastic usage in market sector is divided as follows: 39.7% packaging, 19.8% building, 10.1% automotive, 6.2% electronics, 4.1% household, sports and consumer goods, 3.4% in agriculture and 16.7% other.",
+                "weight": 0.3
+            },
+            {
+                "prompt": "What is the percentage of plastic that gets thrown in the sea?",
+                "options": [
+                    "1%",
+                    "1.5%",
+                    "0.5%",
+                    "4%"
+                ],
+                "answer": 1,
+                "description": "About 2.5% of plastic is thrown in the sea, which corresponds to 7 million tonnes of it.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "In a water bottle on average there are 10.4 plastic particles. From which part of the plastic container comes the most microplastic?",
+                "options": [
+                    "From the bottle",
+                    "From the bottling",
+                    "From the lid",
+                    "From the water source"
+                ],
+                "answer": 2,
+                "description": "The most microplastic present in a water bottle are due to its lid, in fact by twisting off the lid more microplastic is released in the water.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Where was the first plastic-free supermarket opened in Europe?",
+                "options": [
+                    "Amsterdam",
+                    "Rome",
+                    "London",
+                    "Conpenhagen"
+                ],
+                "answer": 0,
+                "description": "This supermarket is called Ekoplaza which, instead of using plastic, chooses to use glass and metal. However this supermarket was closed on the 25th April 2019, now it sells products online and in other supermarket chains.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "How long does a plastic bag take to degrade naturally?",
+                "options": [
+                    "Less than 10 years",
+                    "More than 100 years",
+                    "About 50 years",
+                    "About 80 years"
+                ],
+                "answer": 1,
+                "description": "Plastic is extremely durable to weather exposure, for example a common plastic bottle can take up to 450 years to degrade completely.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "What is the WaterLab Sat System?",
+                "options": [
+                    "A tissue which, when submerged in water, reveals the level of pollution",
+                    "A flask which, when filled with water, removes germs and bacteria",
+                    "A buoy system which shows if the water is clean",
+                    "A project which, through volunteers wants remove rubbish from all coasts"
+                ],
+                "answer": 2,
+                "description": "The WaterLab Sat System is a satellite buoy system with biosensors which allows to check whether sea water is actually clean. A group of roman researchers, Biosensing Technologies, a company which develops sensors for ambiental analysis.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "What is the first european country for bottled water consumption?",
+                "options": [
+                    "Italy",
+                    "France",
+                    "UK",
+                    "Poland"
+                ],
+                "answer": 0,
+                "description": "According to a Censis report, the 61.8% of italian families buys mineral water in plastic bottles and the average consumption is 192 litres per year per person. On average each italian family spends 234 euros for water bottles.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "How much CO2 was the cause of water bottle consumption in 2014 in Italy?",
+                "options": [
+                    "More than 2 million tonnes",
+                    "Less than 500,000 tonnes",
+                    "Between 500,000 and 1 million tonnes",
+                    "About 1.5 million tonnes"
+                ],
+                "answer": 0,
+                "description": "Italy produced 337.6 million tonnes of CO2, 5.5 per capita, in 2014 (latest statistics available) according to a worldwide ranking about CO2 emissions from British Gas, from which, according to SodaStream, more than 2 million tonnes are only due to water bottle consumption.",
+                "weight": 0.3
+            },
+            {
+                "prompt": "How much do italians spend per year to buy water bottles?",
+                "options": [
+                    "4 billion euros",
+                    "100 million euros",
+                    "1.5 billion euros",
+                    "20 billion euros"
+                ],
+                "answer": 2,
+                "description": "To buy water bottles italians spend in one year about 1.5 billion euros: for each family this expense is equal to the garbage collection. When buying a water bottle only about 1% of the cost is actually water. The price for a 6 bottle pack of 1.5 litres bottles, can vary from € 1 to over € 4, the value of the water bought varies from € 0.02 to € 0.08. On average 1 litre of bottled water costs € 0.40, 1 litre from an aqueduct costs € 0.001.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Which size is needed for microplastic to be considered as such?",
+                "options": [
+                    "Less than 5 millimeters",
+                    "Less than 15 millimeters",
+                    "Less than 100 millimeters",
+                    "Less than 2 millimeters"
+                ],
+                "answer": 0,
+                "description": "A microplastic is considered as such if it has a diameter lower than 5 millimeters.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "How long do biodegradable bags take to degrade in the sea?",
+                "options": [
+                    "Over six months",
+                    "Over twenty years",
+                    "Less than three months",
+                    "Over fourty years"
+                ],
+                "answer": 0,
+                "description": "A biodegradable bag still takes six months to degrade in the sea, which is a considerable improvement over traditional plastic which takes about 450 years.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "What is the European Union’s directive for waste recycle for 2035?",
+                "options": [
+                    "65%",
+                    "80%",
+                    "50%",
+                    "90%"
+                ],
+                "answer": 0,
+                "description": "The target of urban waste recycle in the Parliament version was decided as 70% by 2030, in their proposal the commission established the target as 65% by 2030, but the signed agreement the 16 March 2018 established the target as 65% by 2035.",
+                "weight": 0.3
+            },
+            {
+                "prompt": "How is a polymer chain composed?",
+                "options": [
+                    "By the sum of two non-saturated monomers",
+                    "By two equal monomers",
+                    "A polymer chain is composed in nature",
+                    "Polymers don’t have chains"
+                ],
+                "answer": 0,
+                "description": "A polymer chain is composed by the sum of two non-saturated monomers: reactive sites are only found at the end of the polymeric chain and the chain grows due to the reaction of a reactive site with the monomer.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Among biopolymers, which percentage is represented by starch polymers?",
+                "options": [
+                    "Between 60% and 80%",
+                    "Less than 20%",
+                    "More than 80%",
+                    "Between 20% and 60%"
+                ],
+                "answer": 0,
+                "description": "Starch polymers represent the 75% of the total biopolymers produced.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "What does biodegradable mean?",
+                "options": [
+                    "Every substance which can be decomposed by microorganisms in nature",
+                    "What is born in nature is biodegradable",
+                    "What can be recycled is biodegradable",
+                    "What disappears is biodegradable"
+                ],
+                "answer": 0,
+                "description": "Every substance or material which can be degraded by microorganisms (bacteria and fungi) to its complete transformation in basic chemical compounds.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Which factors determine the degradation time of a polymer (equal polymer types)?",
+                "options": [
+                    "Chemical composition (additives, molecular weight, degree of polymerization ...)",
+                    "Conditions",
+                    "The environment (temperature, humidity, oxygen ...)",
+                    "All other answers"
+                ],
+                "answer": 3,
+                "description": "The degradation of a polymer depends on the chemical composition, conditions and the environment.",
+                "weight": 0.3
+            },
+            {
+                "prompt": "What are bioplastics’ disadvantages?",
+                "options": [
+                    "They’re more expensive, they need dedicated infrastructures and are less available",
+                    "There are no actual disadvantages in bioplastic production",
+                    "They’re more expensive, they’re less available and are more fragile",
+                    "They’re more expensive"
+                ],
+                "answer": 0,
+                "description": "Bioplastics are more expensive than traditional plastics, dedicated infrastructures are needed, at the moment they’re less available than traditional plastics.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "What is Orange Fiber?",
+                "options": [
+                    "A vegetal fiber",
+                    "A phone line powered by oranges",
+                    "A fast Internet line powered by oranges",
+                    "A phone line powered by electrical power and oranges"
+                ],
+                "answer": 0,
+                "description": "Orange Fiber is natural fiber developed in Italy; invented by the fashion designer Adriana Santanocito from Catania.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "What is MildDisc?",
+                "options": [
+                    "A CD made from lactose",
+                    "A CD made with a plastic material from Starch",
+                    "A videotape from plastic remains",
+                    "A CD made from petrol plastic"
+                ],
+                "answer": 1,
+                "description": "MildDisc is a CD, invented by a team of Japanese researchers made with a starch plastic material, which doesn’t leave behind harmful substances if burnt or buried.",
+                "weight": 0.3
+            },
+            {
+                "prompt": "What is galalith?",
+                "options": [
+                    "An insoluble polymer from casein",
+                    "A soluble polymer from casein",
+                    "An insoluble monomer from casein",
+                    "A polymer from banana peels"
+                ],
+                "answer": 0,
+                "description": "Casein which is converted to an insoluble polymer using the reaction between formaldehyde and casein is called galalith.",
+                "weight": 0.5
             }
         ],
         "lang": {
@@ -201,10 +477,10 @@
             {
                 "prompt": "Quanti sono i polimeri lavorati dalle industrie delle bioplastiche in Italia?",
                 "options": [
-                    "117000 tonnellate",
-                    "52000 tonnellate",
-                    "73000 tonnellate",
-                    "19000 tonnellate"
+                    "117.000 tonnellate",
+                    "52.000 tonnellate",
+                    "73.000 tonnellate",
+                    "19.000 tonnellate"
                 ],
                 "answer": 2,
                 "description": "I settori applicativi prevalenti delle bioplastiche sono i seguenti: shopper monouso per la spesa 68%, sacchi per la raccolta della frazione organica 13%, strumenti agricoli, ristorazione, packaging alimentare ed igiene della persona 19%.",
@@ -257,6 +533,294 @@
                 "answer": 1,
                 "description": "Le bioplastiche sono di 3 tipi: tipo A: polimeri derivati da fonti rinnovabili e biodegradabili; tipo B: polimeri derivati da fonti rinnovabili, ma non biodegradabili; tipo C: polimeri derivati da fonti non rinnovabili, ma biodegradabili.",
                 "weight": 0.3
+            },
+            {
+                "prompt": "Cos’è un biopolimero?",
+                "options": [
+                    "Un polimero ottenuto da risorse rinnovabili",
+                    "Non c’è una definizione che vada bene per tutti gli studiosi",
+                    "Macromolecole interamente a base biologica e biodegradabili",
+                    "Un polimero derivante da risorse biodegradabili"
+                ],
+                "answer": 2,
+                "description": "Questa categoria di polimeri comprende quelli già presenti in natura come proteine e polisaccaridi, e quelli usati principalmente in campo medico come sostituti di vari composti chimici del corpo umano.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Cos’è una plastica verde?",
+                "options": [
+                    "Un polimero ottenuto da risorse rinnovabili",
+                    "Non c’è una definizione che vada bene per tutti gli studiosi",
+                    "Macromolecole interamente a base biologica e biodegradabili",
+                    "Un polimero derivante da risorse biodegradabili"
+                ],
+                "answer": 0,
+                "description": "Le plastiche verdi sono una versione “più ecologica” di polimeri  ottenuti dal petrolio (PP, PE, PVC, PET). I loro monomeri sono ricavati da fonti rinnovabili come il bioetanolo (da canna da zucchero) ma il polimero finale è identico a quello di origine fossile, quindi non è biodegradabile. Il ciclo di produzione genera meno gas a effetto serra e presenta una “impronta di carbonio” più bassa.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Quanti milioni di tonnellate di bioplastica sono stati prodotti nel 2018?",
+                "options": [
+                    "Meno di 1",
+                    "Tra 2 e 3",
+                    "Tra 3 e 4",
+                    "Più di 4"
+                ],
+                "answer": 0,
+                "description": "Nel 2018 sono stati prodotti 2.11 milioni di tonnellate di bioplastiche, di cui la maggior parte è stata usata per l’imballaggio 66%, seguito dal settore tessile 10%, agricultura 7%, beni di consumo 6%, rivestimenti e adesivi 5%, edilizia ~1%, elettronica ~1% e altro 1%.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "In quale settore le plastiche sono maggiormente utilizzate?",
+                "options": [
+                    "Imballaggio",
+                    "Automobilistico",
+                    "Edilizia",
+                    "Agricoltura"
+                ],
+                "answer": 0,
+                "description": "Le plastiche sono utilizzate per il 39,7% nell’imballaggio, per il 19,8% nelle costruzioni o nelle case, per il 10,1% nelle auto, per il 6,2% nell’elettronica, per il 4,1% nel domestico, nei beni di consumo e negli sport, per il 3,4% nell’agricoltura e per il 16,7% in altro.",
+                "weight": 0.3
+            },
+            {
+                "prompt": "Qual è complessivamente la percentuale di plastica prodotta che viene gettata in mare?",
+                "options": [
+                    "1%",
+                    "2,5%",
+                    "0,5%",
+                    "4%"
+                ],
+                "answer": 1,
+                "description": "Circa il 2,5% della plastica prodotta finisce in mare, che corrisponde a 7 milioni di tonnellate.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Nelle bottiglie d'acqua di si trovano 10,4 particelle di plastica. Da dove proviene la maggior parte della contaminazione?",
+                "options": [
+                    "Dalla bottiglia",
+                    "Dal processo di imbottigliamento",
+                    "Dal tappo",
+                    "Dalla fonte d’acqua"
+                ],
+                "answer": 2,
+                "description": "La maggior parte della contaminazione dell’acqua in bottiglia deriva dal tappo, infatti, svitando il tappo viene liberata della microplastica nell’acqua della bottiglia.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Dove è stato aperto il primo supermercato europeo con prodotti privi di plastiche tradizionali?",
+                "options": [
+                    "Amsterdam",
+                    "Roma",
+                    "Londra",
+                    "Copenhagen"
+                ],
+                "answer": 0,
+                "description": "Il supermercato si chiama Ekoplaza che, invece di utilizzare la plastica, preferisce utilizzare vetro e metallo. Questo supermercato però è stato chiuso il 25 Aprile 2019 e adesso vende prodotti online e in altre catene di supermercati.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Quanto impiega una busta di plastica a smaltirsi nell’ambiente?",
+                "options": [
+                    "Meno di 10 anni",
+                    "Più di 10 anni",
+                    "Circa 50 anni",
+                    "Circa 80 anni"
+                ],
+                "answer": 1,
+                "description": "La plastica è estremamente durevole all’esposizione agli agenti atmosferici, ad esempio una comune bottiglia di plastica può impiegare fino a 450 per smaltirsi.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Cos’è il WaterLab Sat System?",
+                "options": [
+                    "Un fazzoletto che, se immerso nell’acqua, rivela il livello di inquinamento",
+                    "Una borraccia che, quando viene riempite d’acqua, elimina i germi e i batteri",
+                    "Un sistema di boe che mostra se le acque sono pulite",
+                    "Un progetto che, attraverso volontari vuole rimuovere la spazzatura dalle coste del mondo"
+                ],
+                "answer": 2,
+                "description": "WaterLab Sat System è un sistema di boe satellitari dotate di biosensori che consente di rilevare se le acque dei nostri mari sono effettivamente pulite. A realizzarlo è stato un gruppo di ricercatori romani, la Biosensing Technologies, azienda che sviluppa sensori e biosensori per analisi ambientali.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Qual è il primo paese in Europa per consumo di acqua in bottiglia?",
+                "options": [
+                    "Italia",
+                    "Francia",
+                    "UK",
+                    "Polonia"
+                ],
+                "answer": 0,
+                "description": "Secondo un rapporto del Censis, il 61,8% delle famiglie italiane acquista acqua minerale in bottiglia e il consumo medio è pari a 192 litri all’anno per persona. In media ogni famiglia italiana spende 234 euro all’anno per l’acqua in bottiglie di plastica.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Quanti milioni di tonnellate di CO2 sono stati creati a causa del consumo dell’acqua in bottiglia nel 2014 in Italia?",
+                "options": [
+                    "Più di 2",
+                    "Meno 500.000",
+                    "Tra 500.000 e 1 milione",
+                    "1,5 milioni"
+                ],
+                "answer": 0,
+                "description": "L’Italia ha prodotto 337,6 milioni di tonnellate di CO2, pari a 5,5 tonnellate pro capite, nel 2014 (ultimi dati disponibili) secondo una classifica mondiale sulle emissioni di CO2 elaborata da British Gas, dalle quali, secondo i calcoli SodaStream, più di 2 milioni sono dovuti solo ed esclusivamente al consumo dell’acqua in bottiglia.",
+                "weight": 0.3
+            },
+            {
+                "prompt": "Quanto spendono gli italiani in un anno per acquistare acqua in bottiglia?",
+                "options": [
+                    "1,5 miliardi di euro",
+                    "4 miliardi di euro",
+                    "100 milioni di euro",
+                    "20 miliardi di euro"
+                ],
+                "answer": 0,
+                "description": "Per acquistare acqua in bottiglia gli italiani spendono in un anno circa 1.5 miliardi di euro: per ogni famiglia la spesa è quasi pari a quella per la raccolta dei rifiuti. Su ogni euro speso per acquistare acqua in bottiglia solo l’1% è quello effettivo dell’acqua. Il prezzo di un “cesto” da 6 bottiglie in plastica da 1,5 litri, può variare da € 1 a oltre € 4 il valore dell’acqua contenuta varia da € 0,02 a € 0,08. Mediamente 1 l di acqua in bottiglia costa € 0,40, 1 l di acqua dell’acquedotto costa € 0,001.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Da quanti millimetri di diametro una microplastica è considerata tale?",
+                "options": [
+                    "Inferiore 5 millimetri",
+                    "Inferiore a 15 millimetri",
+                    "Inferiore a 100 millimetri",
+                    "Inferiore a 2 millimetri"
+                ],
+                "answer": 0,
+                "description": "Una microplastica è considerata tale quando ha un diametro inferiori a 5 millimetri.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Which size is needed for microplastic to be considered as such?",
+                "options": [
+                    "Inferiore 5 millimetri",
+                    "Inferiore a 15 millimetri",
+                    "Inferiore a 100 millimetri",
+                    "Inferiore a 2 millimetri"
+                ],
+                "answer": 0,
+                "description": "Una microplastica è considerata tale quando ha un diametro inferiori a 5 millimetri.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Quanto tempo impiegano i sacchetti biodegradabili a decomporsi in mare?",
+                "options": [
+                    "Oltre sei mesi",
+                    "Oltre venti anni",
+                    "Oltre cento anni",
+                    "Oltre quaranta anni"
+                ],
+                "answer": 0,
+                "description": "Un sacchetto biodegradabile impiega ben sei mesi per decomporsi in mare, che è un notevole miglioramento rispetto a quello di plastica tradizionale che impiega tra i 400 e i 500 anni per decomporsi.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Qual è la direttiva dell’Unione Europea per il target di riciclo dei rifiuti urbani per il 2035?",
+                "options": [
+                    "65%",
+                    "80%",
+                    "50%",
+                    "90%"
+                ],
+                "answer": 0,
+                "description": "Il target di riciclo dei rifiuti urbani nella versione del Parlamento si fissava il traguardo del 70% entro il 2030, nella proposta della commissione il target era del 65% entro il 2030, ma l’accordo siglato il 16 Marzo del 2018 prevede l’obiettivo del 65% nel 2035.",
+                "weight": 0.3
+            },
+            {
+                "prompt": "Come si forma la catena di un polimero?",
+                "options": [
+                    "Dall’addizione di monomeri non saturi",
+                    "Dall’unione di monomeri uguali",
+                    "La catena di un polimero si forma in natura",
+                    "I polimeri non hanno catene"
+                ],
+                "answer": 0,
+                "description": "La catena di un polimero si forma dall’addizione di monomeri insaturi: i siti reattivi si trovano solo alla fine della catena polimerica e la catena cresce per reazione del sito reattivo col monomero",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Che percentuale costituiscono i polimeri da amido oggi tra i biopolimeri?",
+                "options": [
+                    "Tra il 60% e l’80%",
+                    "Meno del 20%",
+                    "Più del 80%",
+                    "Tra il 20% e il 60%"
+                ],
+                "answer": 0,
+                "description": "I polimeri da amido costituiscono oggi il 75% del totale dei biopolimeri prodotti.",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Che cosa significa biodegradabile?",
+                "options": [
+                    "È biodegradabile ogni sostanza che può essere decomposta da microrganismi in natura",
+                    "È biodegradabile ciò che nasce in natura",
+                    "È biodegradabile ciò che si può riciclare",
+                    "È biodegradabile ciò che scompare "
+                ],
+                "answer": 0,
+                "description": "È biodegradabile ogni sostanza o materiale che può essere decomposto da microrganismi (batteri e funghi) fino a completa trasformazione a composti chimici semplici.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Da cosa dipende il tempo di degradazione di un polimero (a parità di tipo di polimero)?",
+                "options": [
+                    "Formulazione (addittivi, peso molecolare, grado di polimerizzazione, …)",
+                    "Stato di conservazione",
+                    "Ambiente in cui si trova (temperatura, umidità, ossigeno presente…)",
+                    "Tutte le altre risposte"
+                ],
+                "answer": 3,
+                "description": "Il tempo di degradazione di un polimero dipende dalla formulazione, stato di conservazione e dall’ambiente in cui si trova",
+                "weight": 0.3
+            },
+            {
+                "prompt": "Quali sono gli svantaggi delle bioplastiche?",
+                "options": [
+                    "Costano più delle plastiche tradizionali, occorrono impianti dedicate e sono meno reperibilità",
+                    "Non ci sono reali svantaggi nella produzione di bioplastiche",
+                    "Costano più delle plastiche tradizionali, sono meno reperibili e sono più fragili",
+                    "Costano più delle plastiche tradizionali"
+                ],
+                "answer": 0,
+                "description": "Le bioplastiche costano più delle plastiche tradizionali, occorrono impianti dedicati ad esse, al momento sono meno reperibili delle plastiche tradizionali",
+                "weight": 0.5
+            },
+            {
+                "prompt": "Cos’è la Orange Fiber?",
+                "options": [
+                    "Una fibra vegetale",
+                    "Una linea telefonica alimentata attraverso le arance",
+                    "Una linea Internet veloce alimentata ad arance",
+                    "Una linea telefonica alimentata attraverso la corrente elettrica e le arance"
+                ],
+                "answer": 0,
+                "description": "La Orange Fiber è una fibra naturale sviluppata in Italia; ideata dalla fashion designer Adriana Santanocito da Catania.",
+                "weight": 0.2
+            },
+            {
+                "prompt": "Cos’è il MildDisc?",
+                "options": [
+                    "Un CD realizzato attraverso il lattosio",
+                    "Un CD realizzato attraverso con una materia plastica derivata dal Mais",
+                    "Una videocassetta creata attraverso i resti di plastica",
+                    "Un CD realizzato attraverso una plastica del derivata dal petrolio"
+                ],
+                "answer": 1,
+                "description": "Il MildDisc è un CD, inventato da un team di ricercatori giapponesi, realizzato con una materia plastica derivata dal mais, che incenerita o sotterrata non lascia sostanze nocive",
+                "weight": 0.3
+            },
+            {
+                "prompt": "Cos’è la galalite?",
+                "options": [
+                    "Un polimero insolubile derivato dalla caseina",
+                    "Un polimero solubile derivato dalla caseina",
+                    "Un monomero insolubile creato dalla caseina",
+                    "Un polimero derivato da buccia di banana"
+                ],
+                "answer": 0,
+                "description": "La caseina che viene trasformata in un polimero insolubile per reazione con la formaldeide è chiamata galalite.",
+                "weight": 0.5
             }
         ],
         "lang": {
