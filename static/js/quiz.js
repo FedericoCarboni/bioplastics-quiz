@@ -199,9 +199,11 @@ var Quiz = /** @class */ (function () {
             /* Checking if the quiz is finished */
             if (this.index == (this.questions.length - 1)) {
                 /* If it is this shows the form */
-                submit.classList.remove('hidden');
                 submitScore.value = String(this.getScore());
                 submitButton.classList.add('btn-danger');
+                submitButton.value = this.lang.finish;
+                /* Avoiding 400 bad request error by unhiding the form last */
+                submit.classList.remove('hidden');
             }
             else {
                 /* If it's not shows the 'Next' button */
