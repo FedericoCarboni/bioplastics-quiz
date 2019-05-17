@@ -46,7 +46,7 @@
 {% block script %}
   <script src="{{ url_for('static', filename='js/quiz.min.js') }}" crossorigin="anonymous"></script>
   <script>
-    var quiz = new Quiz('{{ "" + quiz|tojson|safe }}');
+    var quiz = new Quiz(JSON.parse('{{ "" + quiz|tojson|safe }}'));
     quiz.populate();
   </script>
 {% endblock %}
