@@ -242,7 +242,7 @@
                 "weight": 0.2
             },
             {
-                "prompt": "How much CO2 was the cause of water bottle consumption in 2014 in Italy?",
+                "prompt": "How much CO2 was caused by bottled water consumption in 2014 in Italy?",
                 "options": [
                     "More than 2 million tonnes",
                     "Less than 500,000 tonnes",
