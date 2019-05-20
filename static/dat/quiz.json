@@ -34,7 +34,7 @@
                     "A plastic made of renewable resources"
                 ],
                 "answer": 0,
-                "description": "There is not an official definition, but the definition approved the most (by European Bioplastic): “A material can be defined [a bioplastic] if it fulfills at least one of these characteristics: is made, at least partly, from renewable resources or it's biodegradable”.",
+                "description": "There is not an official definition, but the definition approved the most (by European Bioplastic): “A material can be defined [a bioplastic] if it fulfils at least one of these characteristics: is made, at least partly, from renewable resources or it's biodegradable”.",
                 "weight": 0.5
             },
             {
@@ -103,7 +103,7 @@
                     "No, it's never biodegradable",
                     "Yes, it's always biodegradable",
                     "Scientists haven't conducted any research about it",
-                    "It depends from the chemical structure"
+                    "It depends on the chemical structure"
                 ],
                 "answer": 3,
                 "description": "Plastics of type B, which are green plastics (bio-Pe, Bio-PP, Bio-PVC e bio-PET), are from renewable sources, but not biodegradable.",

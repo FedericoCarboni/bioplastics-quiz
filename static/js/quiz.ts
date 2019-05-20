@@ -1,11 +1,11 @@
 interface QuizData {
-  questions: Array<Question>;
+  questions: Question[];
   lang: Language;
 }
 
 interface Question {
   prompt: string;
-  options: Array<string>;
+  options: string[];
   answer: number;
   description: string;
   weight: number;
@@ -32,7 +32,7 @@ class Quiz {
   /**
    * This field will contain all the questions of the Quiz.
    */
-  private questions: Array<Question>;
+  private questions: Question[];
   /**
    * This field will contain an object (Language) with all other 
    * translations for the Quiz.
@@ -54,7 +54,7 @@ class Quiz {
    * An Array of Score(s) which will contain the points for each 
    * Question and their respective weight.
    */
-  private scores: Array<Score> = [];
+  private scores: Score[] = [];
 
   /**
    * The constructor of the class, fields 'questions' and 'lang' are
@@ -110,7 +110,7 @@ class Quiz {
   public populate() {
     if (this.index == 0) {
       /* Scrambling questions */
-      for (let i = this.questions.length - 1; i > 0; i--) {
+      for (let i: number = this.questions.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         let tmp = this.questions[i];
         this.questions[i] = this.questions[j];
@@ -281,7 +281,7 @@ class Quiz {
   public hint() {
     /* Custom function to get a random number and avoid all values in except */
     function random(min: number, max: number, except: Array<number>) {
-      let num = Math.floor(Math.random() * (max - min + 1)) + min;
+      let num: number = Math.floor(Math.random() * (max - min + 1)) + min;
       /* Checking if except contains the number generated */
       if (except.indexOf(num) > -1) {
         /* If it does this function will generate a new number */

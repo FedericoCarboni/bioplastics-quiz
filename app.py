@@ -3,9 +3,27 @@ import json
 
 import flask
 from flask_sqlalchemy import SQLAlchemy
+import jinja2
+
+
+@jinja2.evalcontextfilter
+def json_dumps(eval_ctx, value, **kwargs):
+    policies = eval_ctx.environment.policies
+    options = kwargs if kwargs else {
+        'skipkeys': False, 
+        'ensure_ascii': True, 
+        'check_circular': True, 
+        'allow_nan': False, 
+        'sort_keys': True, 
+        'indent': None, 
+        'separators': (',', ':'), 
+        'default': None,
+    }
+    return jinja2.filters.htmlsafe_json_dumps(value, dumper=json.dumps, **options)
 
 
 app = flask.Flask(__name__)
+app.jinja_env.filters['tojson'] = json_dumps
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///results.db'
 
