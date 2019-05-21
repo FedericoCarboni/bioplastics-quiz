@@ -3,7 +3,13 @@
   <div class="container">
     <h1 id="score">Il tuo punteggio è {{ score }}%</h1>
     <hr>
-    <p class="lead text-muted">{{ result_text }}</p>
+    <p class="lead text-muted">{{ description }}</p>
+    <div class="space">
+      <a href="/it/quiz/" class="btn btn-lg btn-{% if score > average %}success{% else %}danger{% endif %}">Riprova</a>
+    </div>
+    <div class="space">
+      <a href="/it/" class="btn btn-primary">Pagina principale</a>
+    </div>
     <div class="chart">
       <canvas id="chart"></canvas>
     </div>
@@ -37,7 +43,7 @@
             label: 'Score',
             data: [result, average],
             backgroundColor: [
-              (result >= 6 || result > average) ? '#28a745' : (result > 4) ? '#ffc107' : '#dc3545',
+              (result >= 60 || result > average) ? '#28a745' : (result > 40) ? '#ffc107' : '#dc3545',
               '#6c757d'
             ]
           }]

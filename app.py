@@ -85,7 +85,7 @@ def result(lang: str):
         chart_data['datasets'] = []
         for result in results:
             if result.time not in chart_data['labels']:
-                delta = datetime.datetime.utcnow() - datetime.datetime.strptime(result.time, '%d/%m/%Y') 
+                delta = datetime.datetime.utcnow() - datetime.datetime.strptime(result.time, '%d/%m/%Y')
                 if delta < datetime.timedelta(days=120):
                     chart_data['labels'].append(result.time)
         data = []
@@ -94,11 +94,23 @@ def result(lang: str):
             for item in results:
                 if item.time == time:
                     temp.append(item)
+            print(temp)
             avg = int(sum(temp) / len(temp)) if len(temp) != 0 else -1
+            print(avg)
             if avg != -1:
                 data.append(avg)
         chart_data['datasets'].append({'label': quiz_json[lang]['lang']['averageperday'], 'data': data, 'borderColor': '#007bff'})
-        result_text = quiz_json[lang]['lang'].get('resultaboveaverage' if score > average else 'resultunderaverage')
-        return flask.render_template(f'{lang}/result.min.html', result_text=result_text, score=score, average=average, chart_data=chart_data)
+        lang_data = quiz_json[lang]['lang']
+        if score > average:
+            description = lang_data['resultaboveaverage'] % {'score': score, 'average': average}
+        else:
+            description = lang_data['resultunderaverage'] % {'score': score, 'average': average}
+        if score < 60:
+            description += lang_data['resultunder60']
+        elif 60 <= score < 80:
+            description += lang_data['resultunder80']
+        else:
+            description += lang_data['resultabove80']
+        return flask.render_template(f'{lang}/result.min.html', description=description, score=score, average=average, chart_data=chart_data)
     else:
         return flask.redirect(f'/{lang}/quiz/')

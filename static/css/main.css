@@ -37,6 +37,10 @@ footer {
   display: none;
 }
 
+.space {
+  margin-bottom: .8rem;
+}
+
 @media (max-width: 980px) {
   .container hr {
     width: 90%;

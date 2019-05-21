@@ -408,8 +408,11 @@
             "nextquestion": "Next Question",
             "finish": "Finish",
             "averageperday": "Average per day",
-            "resultaboveaverage": "Your score is above average, well done!",
-            "resultunderaverage": "Your score is under average, try again?"
+            "resultaboveaverage": "Your result is above average! Congratulations, your score %(score)s%% is above the average %(average)s%%.",
+            "resultunderaverage": "Your result is under average, you only scored %(score)s%%, the average is %(average)s%%.",
+            "resultunder60": "You have little knowledge of bioplastics, unfortunately your result is not sufficient.",
+            "resultunder80": "You have a fair knowledge of bioplastics and you achieved a good result, keep up the good work!",
+            "resultabove80": "You have an excellent knowledge of bioplastics, you achieved a remarkable result!"
         }
     },
     "it": {
@@ -622,7 +625,7 @@
                 "prompt": "Quanto impiega una busta di plastica a smaltirsi nell’ambiente?",
                 "options": [
                     "Meno di 10 anni",
-                    "Più di 10 anni",
+                    "Più di 100 anni",
                     "Circa 50 anni",
                     "Circa 80 anni"
                 ],
@@ -691,24 +694,12 @@
                 "weight": 0.2
             },
             {
-                "prompt": "Which size is needed for microplastic to be considered as such?",
-                "options": [
-                    "Inferiore 5 millimetri",
-                    "Inferiore a 15 millimetri",
-                    "Inferiore a 100 millimetri",
-                    "Inferiore a 2 millimetri"
-                ],
-                "answer": 0,
-                "description": "Una microplastica è considerata tale quando ha un diametro inferiori a 5 millimetri.",
-                "weight": 0.5
-            },
-            {
                 "prompt": "Quanto tempo impiegano i sacchetti biodegradabili a decomporsi in mare?",
                 "options": [
-                    "Oltre sei mesi",
-                    "Oltre venti anni",
-                    "Oltre cento anni",
-                    "Oltre quaranta anni"
+                    "Oltre 6 mesi",
+                    "Oltre 20 anni",
+                    "Oltre 100 anni",
+                    "Oltre 40 anni"
                 ],
                 "answer": 0,
                 "description": "Un sacchetto biodegradabile impiega ben sei mesi per decomporsi in mare, che è un notevole miglioramento rispetto a quello di plastica tradizionale che impiega tra i 400 e i 500 anni per decomporsi.",
@@ -833,8 +824,11 @@
             "nextquestion": "Prossima Domanda",
             "finish": "Finisci",
             "averageperday": "Media giornaliera",
-            "resultaboveaverage": "Your score is above average, well done!",
-            "resultunderaverage": "Your score is under average, try again?"
+            "resultaboveaverage": "Risultato sopra la media! Complimenti, il tuo punteggio di %(score)s%% ha superato la media %(average)s%%.",
+            "resultunderaverage": "Risultato sotto la media, purtroppo il tuo punteggio di %(score)s%% è inferiore alla media %(average)s%%.",
+            "resultunder60": "Hai scarse conoscenze delle bioplastiche, purtroppo il tuo risultato non è sufficiente.",
+            "resultunder80": "Hai buone conoscenze delle bioplastiche e hai ottenuto un buon risultato, continua così!",
+            "resultabove80": "Hai ottime conoscenze delle bioplastiche, hai ottenuto un risultato eccellente!"
         }
     }
 }
