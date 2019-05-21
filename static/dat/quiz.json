@@ -280,10 +280,10 @@
             {
                 "prompt": "How long do biodegradable bags take to degrade in the sea?",
                 "options": [
-                    "Over six months",
-                    "Over twenty years",
-                    "Less than three months",
-                    "Over fourty years"
+                    "Over 6 months",
+                    "Over 20 years",
+                    "Less than 3 months",
+                    "Over 40 years"
                 ],
                 "answer": 0,
                 "description": "A biodegradable bag still takes six months to degrade in the sea, which is a considerable improvement over traditional plastic which takes about 450 years.",
@@ -698,7 +698,7 @@
                 "options": [
                     "Oltre 6 mesi",
                     "Oltre 20 anni",
-                    "Oltre 100 anni",
+                    "Meno di 3 mesi",
                     "Oltre 40 anni"
                 ],
                 "answer": 0,
