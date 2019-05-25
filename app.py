@@ -69,7 +69,7 @@ def quiz(lang: str):
     if lang not in langs:
         return flask.abort(404)
     payload = {
-        'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=4)
+        'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=4)
     }
     token = jwt.encode(payload, key=app.config['SECRET_KEY'])
     return flask.render_template(f'{lang}/quiz.min.html', quiz=quiz_json[lang], token=token.decode('utf-8'))
