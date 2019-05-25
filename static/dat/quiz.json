@@ -242,7 +242,7 @@
                 "weight": 0.2
             },
             {
-                "prompt": "How much CO2 was caused by bottled water consumption in 2014 in Italy?",
+                "prompt": "How much CO<sub>2</sub> was caused by bottled water consumption in 2014 in Italy?",
                 "options": [
                     "More than 2 million tonnes",
                     "Less than 500,000 tonnes",
@@ -250,7 +250,7 @@
                     "About 1.5 million tonnes"
                 ],
                 "answer": 0,
-                "description": "Italy produced 337.6 million tonnes of CO2, 5.5 per capita, in 2014 (latest statistics available) according to a worldwide ranking about CO2 emissions from British Gas, from which, according to SodaStream, more than 2 million tonnes are only due to water bottle consumption.",
+                "description": "Italy produced 337.6 million tonnes of CO<sub>2</sub>, 5.5 per capita, in 2014 (latest statistics available) according to a worldwide ranking about CO<sub>2</sub> emissions from British Gas, from which, according to SodaStream, more than 2 million tonnes are only due to water bottle consumption.",
                 "weight": 0.3
             },
             {
@@ -658,7 +658,7 @@
                 "weight": 0.2
             },
             {
-                "prompt": "Quanti milioni di tonnellate di CO2 sono stati creati a causa del consumo dell’acqua in bottiglia nel 2014 in Italia?",
+                "prompt": "Quanti milioni di tonnellate di CO<sub>2</sub> sono stati creati a causa del consumo dell’acqua in bottiglia nel 2014 in Italia?",
                 "options": [
                     "Più di 2",
                     "Meno 500.000",
@@ -666,7 +666,7 @@
                     "1,5 milioni"
                 ],
                 "answer": 0,
-                "description": "L’Italia ha prodotto 337,6 milioni di tonnellate di CO2, pari a 5,5 tonnellate pro capite, nel 2014 (ultimi dati disponibili) secondo una classifica mondiale sulle emissioni di CO2 elaborata da British Gas, dalle quali, secondo i calcoli SodaStream, più di 2 milioni sono dovuti solo ed esclusivamente al consumo dell’acqua in bottiglia.",
+                "description": "L’Italia ha prodotto 337,6 milioni di tonnellate di CO<sub>2</sub>, pari a 5,5 tonnellate pro capite, nel 2014 (ultimi dati disponibili) secondo una classifica mondiale sulle emissioni di CO<sub>2</sub> elaborata da British Gas, dalle quali, secondo i calcoli SodaStream, più di 2 milioni sono dovuti solo ed esclusivamente al consumo dell’acqua in bottiglia.",
                 "weight": 0.3
             },
             {

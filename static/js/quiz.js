@@ -74,7 +74,7 @@ var Quiz = /** @class */ (function () {
                 this.questions[i] = this.questions[j];
                 this.questions[j] = tmp;
             }
-            document.getElementById('next-question').innerText = this.lang.nextquestion;
+            document.getElementById('next-question').innerHTML = this.lang.nextquestion;
         }
         this.hintUsed = false;
         /* Hinding the description and the 'Next' button of the question */
@@ -100,8 +100,8 @@ var Quiz = /** @class */ (function () {
         }
         var question = this.questions[this.index];
         /* Updating the question header and body */
-        document.getElementById('question-header').innerText = question.prompt;
-        document.getElementById('question-index').innerText = this.lang.questionindex.replace('%s', String(this.index + 1));
+        document.getElementById('question-header').innerHTML = question.prompt;
+        document.getElementById('question-index').innerHTML = this.lang.questionindex.replace('%s', String(this.index + 1));
         var options = document.getElementById('question-options');
         /* Clearing all options */
         while (options.firstChild) {
@@ -114,7 +114,7 @@ var Quiz = /** @class */ (function () {
             questionOption.classList.add('question-option');
             var option = document.createElement('button');
             option.id = 'option-' + i;
-            option.innerText = question.options[i];
+            option.innerHTML = question.options[i];
             option.classList.add('btn');
             option.classList.add('btn-primary');
             /* Setting 'onclick' function, this is a wrapped function
@@ -169,7 +169,7 @@ var Quiz = /** @class */ (function () {
             /* Adding the score to the 'scores' field */
             this.scores.push({ score: score, weight: question.weight });
             /* Setting the quiz' description header */
-            descHeader.innerText = this.lang.descriptioncorrect;
+            descHeader.innerHTML = this.lang.descriptioncorrect;
             description.classList.add('bg-success');
             /* Updating the 'Next' button and 'Finish' form last to avoid
             error 400 bad request, by Python */
@@ -192,7 +192,7 @@ var Quiz = /** @class */ (function () {
             /* Adding the score to the 'scores' field */
             this.scores.push({ score: 0.0, weight: question.weight });
             /* Setting the quiz' description header */
-            descHeader.innerText = this.lang.descriptionwrong;
+            descHeader.innerHTML = this.lang.descriptionwrong;
             description.classList.add('bg-danger');
             /* Updating the 'Next' button and 'Finish' form last to avoid
             error 400 bad request, by Python */

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>BioPlastics Quiz</title>
+  <title>{% block title %}BioPlastics Quiz{% endblock %}</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Main CSS file for the project -->
@@ -14,10 +14,12 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quiz.min.css') }}" integrity="sha384-DlYTHDAfYrLZ/DpcCmQwcWTK2H+Og0h5cM3rjgH7deu6lHHGohJx2OlOgN6yl8xW" crossorigin="anonymous">
   {% endif %}
   {% block style %}{% endblock %}
-  <!-- Setting Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
-  <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+  {% block favicon %}
+    <!-- Setting Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='img/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+  {% endblock %}
 </head>
 <body>
   <div class="content">
@@ -31,16 +33,7 @@
     </footer>
   </div>
   <noscript>
-    <style type="text/css">
-      .content {
-        display: none;
-      }
-    </style>
-    <div class="noscript">
-      <p>
-        It seems like your browser blocked some functionality of this webpage, please allow JavaScript and refresh the page.
-      </p>
-    </div>
+    It seems like your browser blocked some functionality of this webpage, please allow JavaScript and refresh the page.
   </noscript>
   <!-- jQuery, Popper.js and Bootstrap JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

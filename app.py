@@ -1,9 +1,12 @@
+import functools
 import datetime
+import secrets
 import json
 
 import flask
 from flask_sqlalchemy import SQLAlchemy
 import jinja2
+import jwt
 
 
 @jinja2.evalcontextfilter
@@ -26,6 +29,7 @@ app = flask.Flask(__name__)
 app.jinja_env.filters['tojson'] = json_dumps
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///results.db'
+app.config['SECRET_KEY'] = secrets.token_hex(32)
 
 db = SQLAlchemy(app)
 
@@ -50,7 +54,7 @@ langs = list(quiz_json.keys())
 
 @app.route('/')
 def index_redirect():
-    return flask.redirect('/' + langs[0])
+    return flask.redirect('/' + langs[0] + '/')
 
 
 @app.route('/<string:lang>/')
@@ -64,7 +68,11 @@ def index(lang: str):
 def quiz(lang: str):
     if lang not in langs:
         return flask.abort(404)
-    return flask.render_template(f'{lang}/quiz.min.html', quiz=quiz_json[lang])
+    payload = {
+        'exp': datetime.datetime.utcnow() + datetime.timedelta(seconds=4)
+    }
+    token = jwt.encode(payload, key=app.config['SECRET_KEY'])
+    return flask.render_template(f'{lang}/quiz.min.html', quiz=quiz_json[lang], token=token.decode('utf-8'))
 
 
 @app.route('/<string:lang>/quiz/result/', methods=['GET', 'POST'])
@@ -72,6 +80,12 @@ def result(lang: str):
     if lang not in langs:
         return flask.abort(404)
     if flask.request.method == 'POST':
+        try:
+            tok_payload = jwt.decode(flask.request.form.get('token').encode(), key=app.config['SECRET_KEY'])
+        except jwt.ExpiredSignatureError as e:
+            return flask.abort(401)
+        except jwt.InvalidTokenError as e:
+            return flask.abort(404)
         results = Result.query.all()
         average = int(sum(results) / len(results)) if len(results) != 0 else 0
         score = flask.request.form.get('score')

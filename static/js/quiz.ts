@@ -116,7 +116,7 @@ class Quiz {
         this.questions[i] = this.questions[j];
         this.questions[j] = tmp;
       }
-      document.getElementById('next-question').innerText = this.lang.nextquestion;
+      document.getElementById('next-question').innerHTML = this.lang.nextquestion;
     }
 
     this.hintUsed = false;
@@ -148,8 +148,8 @@ class Quiz {
     let question = this.questions[this.index];
   
     /* Updating the question header and body */
-    document.getElementById('question-header').innerText = question.prompt;
-    document.getElementById('question-index').innerText = this.lang.questionindex.replace('%s', String(this.index + 1));
+    document.getElementById('question-header').innerHTML = question.prompt;
+    document.getElementById('question-index').innerHTML = this.lang.questionindex.replace('%s', String(this.index + 1));
   
     let options = document.getElementById('question-options');
 
@@ -165,7 +165,7 @@ class Quiz {
       questionOption.classList.add('question-option');
       let option = document.createElement('button');
       option.id = 'option-' + i;
-      option.innerText = question.options[i];
+      option.innerHTML = question.options[i];
       option.classList.add('btn');
       option.classList.add('btn-primary');
       /* Setting 'onclick' function, this is a wrapped function 
@@ -228,7 +228,7 @@ class Quiz {
       this.scores.push({score: score, weight: question.weight});
 
       /* Setting the quiz' description header */
-      descHeader.innerText = this.lang.descriptioncorrect;
+      descHeader.innerHTML = this.lang.descriptioncorrect;
 
       description.classList.add('bg-success');
 
@@ -252,7 +252,7 @@ class Quiz {
       this.scores.push({score: 0.0, weight: question.weight});
 
       /* Setting the quiz' description header */
-      descHeader.innerText = this.lang.descriptionwrong;
+      descHeader.innerHTML = this.lang.descriptionwrong;
 
       description.classList.add('bg-danger');
 
