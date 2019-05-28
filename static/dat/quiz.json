@@ -16,13 +16,13 @@
             {
                 "prompt": "What is a polymer?",
                 "options": [
-                    "A set of giant molecules made up of smaller chains called repetitive units",
-                    "A set of micro molecules that makes a big macromolecule",
+                    "A giant molecule made up of smaller chains called repetitive units",
+                    "A set of giant molecules that make a micromolecule",
                     "A set of repetitive units",
                     "A tiny molecule that attaches to another"
                 ],
                 "answer": 0,
-                "description": "A polymer (word coined from the greek words “πολύς” and “μέφος”, translated many parts) is a set of giant molecules (macromolecules) made up of many smaller chains called repetitive units, kept together by covalent bonds.",
+                "description": "A polymer (word coined from the greek words “πολύς” and “μέφος”, translated many parts) is a giant molecule (macromolecule) made up of many smaller chains called repetitive units, kept together by covalent bonds.",
                 "weight": 0.5
             },
             {
@@ -62,7 +62,7 @@
                 "weight": 0.3
             },
             {
-                "prompt": "How much bioplastic is produced by industries in Italy?",
+                "prompt": "How much bioplastic is produced by bioplastics industries in Italy?",
                 "options": [
                     "117,000 tonnes",
                     "52,000 tonnes",
@@ -202,7 +202,7 @@
                     "Conpenhagen"
                 ],
                 "answer": 0,
-                "description": "This supermarket is called Ekoplaza which, instead of using plastic, chooses to use glass and metal. However this supermarket was closed on the 25th April 2019, now it sells products online and in other supermarket chains.",
+                "description": "This supermarket is called Ekoplaza and, instead of using plastic, chooses to use glass and metal. However this supermarket was closed on the 25th April 2019, now it sells products online and in other supermarket chains.",
                 "weight": 0.2
             },
             {
@@ -250,7 +250,7 @@
                     "About 1.5 million tonnes"
                 ],
                 "answer": 0,
-                "description": "Italy produced 337.6 million tonnes of CO<sub>2</sub>, 5.5 per capita, in 2014 (latest statistics available) according to a worldwide ranking about CO<sub>2</sub> emissions from British Gas, from which, according to SodaStream, more than 2 million tonnes are only due to water bottle consumption.",
+                "description": "Italy produced 337.6 million tonnes of CO<sub>2</sub>, 5.5 per capita, in 2014 (latest statistics available) according to a worldwide ranking about CO<sub>2</sub> emissions by British Gas, according to SodaStream’s calculations, more than 2 million tonnes are only due to water bottle consumption.",
                 "weight": 0.3
             },
             {
@@ -262,11 +262,11 @@
                     "20 billion euros"
                 ],
                 "answer": 2,
-                "description": "To buy water bottles italians spend in one year about 1.5 billion euros: for each family this expense is equal to the garbage collection. When buying a water bottle only about 1% of the cost is actually water. The price for a 6 bottle pack of 1.5 litres bottles, can vary from € 1 to over € 4, the value of the water bought varies from € 0.02 to € 0.08. On average 1 litre of bottled water costs € 0.40, 1 litre from an aqueduct costs € 0.001.",
+                "description": "To buy water bottles italians spend in one year about 1.5 billion euros: for each family this expense is equal to the garbage collection. When buying a water bottle only about 1% of the cost is actually water. The price for a 6 bottle pack of 1.5 litres bottles, can vary from €1 to over €4, the value of the water bought varies from €0.02 to €0.08. On average 1 litre of bottled water costs €0.40, 1 litre from an aqueduct costs €0.001.",
                 "weight": 0.2
             },
             {
-                "prompt": "Which size is needed for microplastic to be considered as such?",
+                "prompt": "Which is diameter of a microplastic for it to be considered as such?",
                 "options": [
                     "Less than 5 millimeters",
                     "Less than 15 millimeters",
@@ -298,19 +298,19 @@
                     "90%"
                 ],
                 "answer": 0,
-                "description": "The target of urban waste recycle in the Parliament version was decided as 70% by 2030, in their proposal the commission established the target as 65% by 2030, but the signed agreement the 16 March 2018 established the target as 65% by 2035.",
+                "description": "The target of urban waste recycle established by the european Parliament was 70% by 2030, the Commission’s proposal was 65% by 2030. The signed agreement, 16 March 2018, established the target as 65% by 2035.",
                 "weight": 0.3
             },
             {
-                "prompt": "How is a polymer chain composed?",
+                "prompt": "How can a polymer chain be composed?",
                 "options": [
-                    "By the sum of two non-saturated monomers",
+                    "By the sum of two unsaturated monomers",
                     "By two equal monomers",
                     "A polymer chain is composed in nature",
                     "Polymers don’t have chains"
                 ],
                 "answer": 0,
-                "description": "A polymer chain is composed by the sum of two non-saturated monomers: reactive sites are only found at the end of the polymeric chain and the chain grows due to the reaction of a reactive site with the monomer.",
+                "description": "A polymer chain can be composed by the sum of two unsaturated monomers: reactive sites are only found at the end of the polymeric chain and the chain grows due to the reaction of a reactive site with the monomer.",
                 "weight": 0.5
             },
             {
@@ -352,7 +352,7 @@
             {
                 "prompt": "What are bioplastics’ disadvantages?",
                 "options": [
-                    "They’re more expensive, they need dedicated infrastructures and are less available",
+                    "They’re more expensive, they need dedicated infrastructures and they are currently less available",
                     "There are no actual disadvantages in bioplastic production",
                     "They’re more expensive, they’re less available and are more fragile",
                     "They’re more expensive"
@@ -432,25 +432,25 @@
             {
                 "prompt": "Cos'è un polimero?",
                 "options": [
-                    "Un insieme di molecole giganti costituite da tanti mattoncini detti unità ripetitive",
-                    "Un insieme di micro molecole che forma una grande macro molecola",
+                    "Una molecola gigante costituita da tanti mattoncini detti unità ripetitive",
+                    "Un insieme di macromolecole che formano una micromolecola",
                     "Un insieme di unità ripetitive",
-                    "Una micro molecola che si unisce ad un'altra"
+                    "Una micromolecola che si unisce ad un'altra"
                 ],
                 "answer": 0,
-                "description": "Un polimero (parola coniata dall'unione delle parole greche “πολύς” e “μέφος”, tradotto molte parti) è un insieme di molecole giganti (macromolecole) costituite da tanti mattoncini detti unità ripetitive, tenute insieme da legami covalenti.",
+                "description": "Un polimero (parola coniata dall'unione delle parole greche “πολύς” e “μέφος”, tradotto molte parti) è una molecola gigante (macromolecola) costituita da tanti mattoncini detti unità ripetitive, tenute insieme da legami covalenti.",
                 "weight": 0.5
             },
             {
                 "prompt": "Cosa sono le bioplastiche?",
                 "options": [
-                    "Non c'è una definizione che vada bene per tutti gli studiosi",
+                    "Non c'è una definizione accettata da tutti gli studiosi",
                     "Una plastica che deriva anche solo in parte da risorse rinnovabili o è biodegradabile",
                     "Una plastica biodegradabile",
                     "Una plastica che proviene da fonti rinnovabili"
                 ],
                 "answer": 0,
-                "description": "Non c'è una definizione che vada bene per tutti, ma la definizione più condivisa (dell'European Bioplastic): “Un materiale può essere definito [una bioplastica] se possiede almeno una di queste caratteristiche: deriva, anche solo in parte, da risorse rinnovabili o è biodegradabile.”",
+                "description": "Non c'è una definizione accettata da tutti, ma la definizione più condivisa (dell'European Bioplastic): “Un materiale può essere definito [una bioplastica] se possiede almeno una di queste caratteristiche: deriva, anche solo in parte, da risorse rinnovabili o è biodegradabile.”",
                 "weight": 0.5
             },
             {
@@ -462,7 +462,7 @@
                     "Gli studi sono ancora in corso"
                 ],
                 "answer": 0,
-                "description": "Nel 2013, a 16 anni, la studentessa Elif Bilgin ha scoperto il processo con il quale creare plastica con la buccia delle banane. Per la sua scoperta la studentessa ha vinto il primo premio, ovvero 50 mila dollari, al concorso “Scientific American Science in Action”.",
+                "description": "Nel 2013, a 16 anni, la studentessa Elif Bilgin ha scoperto il processo attraverso il quale creare plastica con la buccia dalle banane. Per la sua scoperta la studentessa ha vinto il primo premio, ovvero 50 mila dollari, al concorso “Scientific American Science in Action”.",
                 "weight": 0.2
             },
             {
@@ -478,7 +478,7 @@
                 "weight": 0.3
             },
             {
-                "prompt": "Quanti sono i polimeri lavorati dalle industrie delle bioplastiche in Italia?",
+                "prompt": "Quante tonnellate di polimeri vengono lavorate dalle industrie delle bioplastiche in Italia?",
                 "options": [
                     "117.000 tonnellate",
                     "52.000 tonnellate",
@@ -490,7 +490,7 @@
                 "weight": 0.5
             },
             {
-                "prompt": "Quanto è il fatturato complessivo delle aziende di bioplastiche in Italia (annuale)?",
+                "prompt": "Quanto è il fatturato complessivo delle aziende produttrici di bioplastiche in Italia (annuale)?",
                 "options": [
                     "Tra 200 e 400 milioni di euro",
                     "Tra 450 e 600 milioni di euro",
@@ -541,7 +541,7 @@
                 "prompt": "Cos’è un biopolimero?",
                 "options": [
                     "Un polimero ottenuto da risorse rinnovabili",
-                    "Non c’è una definizione che vada bene per tutti gli studiosi",
+                    "Non c’è una definizione accettata da tutti gli studiosi",
                     "Macromolecole interamente a base biologica e biodegradabili",
                     "Un polimero derivante da risorse biodegradabili"
                 ],
@@ -553,7 +553,7 @@
                 "prompt": "Cos’è una plastica verde?",
                 "options": [
                     "Un polimero ottenuto da risorse rinnovabili",
-                    "Non c’è una definizione che vada bene per tutti gli studiosi",
+                    "Non c’è una definizione accettata da tutti gli studiosi",
                     "Macromolecole interamente a base biologica e biodegradabili",
                     "Un polimero derivante da risorse biodegradabili"
                 ],
@@ -598,18 +598,6 @@
                 "weight": 0.2
             },
             {
-                "prompt": "Nelle bottiglie d'acqua di si trovano 10,4 particelle di plastica. Da dove proviene la maggior parte della contaminazione?",
-                "options": [
-                    "Dalla bottiglia",
-                    "Dal processo di imbottigliamento",
-                    "Dal tappo",
-                    "Dalla fonte d’acqua"
-                ],
-                "answer": 2,
-                "description": "La maggior parte della contaminazione dell’acqua in bottiglia deriva dal tappo, infatti, svitando il tappo viene liberata della microplastica nell’acqua della bottiglia.",
-                "weight": 0.5
-            },
-            {
                 "prompt": "Dove è stato aperto il primo supermercato europeo con prodotti privi di plastiche tradizionali?",
                 "options": [
                     "Amsterdam",
@@ -618,7 +606,7 @@
                     "Copenhagen"
                 ],
                 "answer": 0,
-                "description": "Il supermercato si chiama Ekoplaza che, invece di utilizzare la plastica, preferisce utilizzare vetro e metallo. Questo supermercato però è stato chiuso il 25 Aprile 2019 e adesso vende prodotti online e in altre catene di supermercati.",
+                "description": "Il supermercato si chiama Ekoplaza e, invece di utilizzare la plastica, preferisce utilizzare vetro e metallo. Questo supermercato però è stato chiuso il 25 Aprile 2019 e adesso vende prodotti online e in altre catene di supermercati.",
                 "weight": 0.2
             },
             {
@@ -642,7 +630,7 @@
                     "Un progetto che, attraverso volontari vuole rimuovere la spazzatura dalle coste del mondo"
                 ],
                 "answer": 2,
-                "description": "WaterLab Sat System è un sistema di boe satellitari dotate di biosensori che consente di rilevare se le acque dei nostri mari sono effettivamente pulite. A realizzarlo è stato un gruppo di ricercatori romani, la Biosensing Technologies, azienda che sviluppa sensori e biosensori per analisi ambientali.",
+                "description": "WaterLab Sat System è un sistema di boe satellitari dotate di biosensori che consente di rilevare se le acque dei nostri mari sono effettivamente pulite. A realizzarlo è stato un gruppo di ricercatori romani, della Biosensing Technologies, azienda che sviluppa sensori e biosensori per analisi ambientali.",
                 "weight": 0.5
             },
             {
@@ -678,11 +666,11 @@
                     "20 miliardi di euro"
                 ],
                 "answer": 0,
-                "description": "Per acquistare acqua in bottiglia gli italiani spendono in un anno circa 1.5 miliardi di euro: per ogni famiglia la spesa è quasi pari a quella per la raccolta dei rifiuti. Su ogni euro speso per acquistare acqua in bottiglia solo l’1% è quello effettivo dell’acqua. Il prezzo di un “cesto” da 6 bottiglie in plastica da 1,5 litri, può variare da € 1 a oltre € 4 il valore dell’acqua contenuta varia da € 0,02 a € 0,08. Mediamente 1 l di acqua in bottiglia costa € 0,40, 1 l di acqua dell’acquedotto costa € 0,001.",
+                "description": "Per acquistare acqua in bottiglia gli italiani spendono in un anno circa 1.5 miliardi di euro: per ogni famiglia la spesa è quasi pari a quella per la raccolta dei rifiuti. Su ogni euro speso per acquistare acqua in bottiglia solo l’1% è quello effettivo dell’acqua. Il prezzo di un “cesto” da 6 bottiglie in plastica da 1,5 litri, può variare da 1 € a oltre 4 € il valore dell’acqua contenuta varia da 0,02 € a 0,08 €. Mediamente 1 l di acqua in bottiglia costa 0,40 €, 1 l di acqua dell’acquedotto costa 0,001 €.",
                 "weight": 0.2
             },
             {
-                "prompt": "Da quanti millimetri di diametro una microplastica è considerata tale?",
+                "prompt": "Qual è il diametro una microplastica perché sia considerata tale?",
                 "options": [
                     "Inferiore 5 millimetri",
                     "Inferiore a 15 millimetri",
@@ -706,7 +694,7 @@
                 "weight": 0.2
             },
             {
-                "prompt": "Qual è la direttiva dell’Unione Europea per il target di riciclo dei rifiuti urbani per il 2035?",
+                "prompt": "Secondo la direttiva dell’Unione Europea, qual è il target di riciclo dei rifiuti urbani per il 2035?",
                 "options": [
                     "65%",
                     "80%",
@@ -714,23 +702,23 @@
                     "90%"
                 ],
                 "answer": 0,
-                "description": "Il target di riciclo dei rifiuti urbani nella versione del Parlamento si fissava il traguardo del 70% entro il 2030, nella proposta della commissione il target era del 65% entro il 2030, ma l’accordo siglato il 16 Marzo del 2018 prevede l’obiettivo del 65% nel 2035.",
+                "description": "Il target di riciclo di rifiuti urbani fissato dal Parlamento europeo era del 70% entro il 2030, la proposta della Commissione era del 65% entro il 2030. Un successivo, accordo firmato il 16 Marzo del 2018, ha fissato l’obiettivo del 65% entro il 2035.",
                 "weight": 0.3
             },
             {
-                "prompt": "Come si forma la catena di un polimero?",
+                "prompt": "Come si può formare la catena di un polimero?",
                 "options": [
-                    "Dall’addizione di monomeri non saturi",
+                    "Dall’addizione di monomeri insaturi",
                     "Dall’unione di monomeri uguali",
                     "La catena di un polimero si forma in natura",
                     "I polimeri non hanno catene"
                 ],
                 "answer": 0,
-                "description": "La catena di un polimero si forma dall’addizione di monomeri insaturi: i siti reattivi si trovano solo alla fine della catena polimerica e la catena cresce per reazione del sito reattivo col monomero",
+                "description": "La catena di un polimero si può formare dall’addizione di monomeri insaturi: i siti reattivi si trovano solo alla fine della catena polimerica e la catena cresce per reazione del sito reattivo col monomero",
                 "weight": 0.5
             },
             {
-                "prompt": "Che percentuale costituiscono i polimeri da amido oggi tra i biopolimeri?",
+                "prompt": "Tra i biopolimeri, quale percentuale è attualmente costituita da quelli ricavati dall’amido?",
                 "options": [
                     "Tra il 60% e l’80%",
                     "Meno del 20%",
@@ -756,7 +744,7 @@
             {
                 "prompt": "Da cosa dipende il tempo di degradazione di un polimero (a parità di tipo di polimero)?",
                 "options": [
-                    "Formulazione (addittivi, peso molecolare, grado di polimerizzazione, …)",
+                    "Formulazione (additivi, peso molecolare, grado di polimerizzazione, …)",
                     "Stato di conservazione",
                     "Ambiente in cui si trova (temperatura, umidità, ossigeno presente…)",
                     "Tutte le altre risposte"
@@ -768,7 +756,7 @@
             {
                 "prompt": "Quali sono gli svantaggi delle bioplastiche?",
                 "options": [
-                    "Costano più delle plastiche tradizionali, occorrono impianti dedicate e sono meno reperibilità",
+                    "Costano più delle plastiche tradizionali, occorrono impianti dedicate e attualmente sono meno reperibili",
                     "Non ci sono reali svantaggi nella produzione di bioplastiche",
                     "Costano più delle plastiche tradizionali, sono meno reperibili e sono più fragili",
                     "Costano più delle plastiche tradizionali"
@@ -793,7 +781,7 @@
                 "prompt": "Cos’è il MildDisc?",
                 "options": [
                     "Un CD realizzato attraverso il lattosio",
-                    "Un CD realizzato attraverso con una materia plastica derivata dal Mais",
+                    "Un CD realizzato attraverso una materia plastica derivata dal Mais",
                     "Una videocassetta creata attraverso i resti di plastica",
                     "Un CD realizzato attraverso una plastica del derivata dal petrolio"
                 ],
