@@ -418,7 +418,7 @@
     "it": {
         "questions": [
             {
-                "prompt": "Quanti milioni di tonnellate di plastica sono state prodotte nel 2017?",
+                "prompt": "Quanti milioni di tonnellate di plastica sono state prodotti nel 2017?",
                 "options": [
                     "Meno di 100",
                     "Tra 200 e 300",
@@ -478,7 +478,7 @@
                 "weight": 0.3
             },
             {
-                "prompt": "Quante tonnellate di polimeri vengono lavorate dalle industrie delle bioplastiche in Italia?",
+                "prompt": "Quante tonnellate di polimeri vengono lavorate dalle industrie produttrici di bioplastiche in Italia?",
                 "options": [
                     "117.000 tonnellate",
                     "52.000 tonnellate",
@@ -646,7 +646,7 @@
                 "weight": 0.2
             },
             {
-                "prompt": "Quanti milioni di tonnellate di CO<sub>2</sub> sono stati creati a causa del consumo dell’acqua in bottiglia nel 2014 in Italia?",
+                "prompt": "Quanti milioni di tonnellate di CO<sub>2</sub> sono stati prodotti a causa del consumo dell’acqua in bottiglia nel 2014 in Italia?",
                 "options": [
                     "Più di 2",
                     "Meno 500.000",
