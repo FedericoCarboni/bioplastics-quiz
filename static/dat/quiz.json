@@ -418,7 +418,7 @@
     "it": {
         "questions": [
             {
-                "prompt": "Quanti milioni di tonnellate di plastica sono state prodotti nel 2017?",
+                "prompt": "Quanti milioni di tonnellate di plastica sono stati prodotti nel 2017?",
                 "options": [
                     "Meno di 100",
                     "Tra 200 e 300",
@@ -426,7 +426,7 @@
                     "Più di 500"
                 ],
                 "answer": 2,
-                "description": "La produzione mondiale di plastica è aumentata rapidamente e regolarmente dagli anni ‘60 ad oggi. Nel 2017 la produzione di mondiale di plastica ha superato i 400 milioni di tonnellate, superando le statistiche precedenti.",
+                "description": "La produzione mondiale di plastica è aumentata rapidamente e regolarmente dagli anni ‘60 ad oggi. Nel 2017 la produzione mondiale di plastica ha superato i 400 milioni di tonnellate, superando le statistiche precedenti.",
                 "weight": 0.5
             },
             {
@@ -670,7 +670,7 @@
                 "weight": 0.2
             },
             {
-                "prompt": "Qual è il diametro una microplastica perché sia considerata tale?",
+                "prompt": "Qual è il diametro di una microplastica perché sia considerata tale?",
                 "options": [
                     "Inferiore 5 millimetri",
                     "Inferiore a 15 millimetri",
